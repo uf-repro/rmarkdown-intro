@@ -1,5 +1,5 @@
 ---
-title: "A Friendly Introduction to Github for Project Version Control"
+title: "An Introduction to Writing Reproducible Manuscripts Using RMarkdown"
 author: "Hao Ye"
 institute: "Health Science Center Libraries, University of Florida"
 date: "(updated: `r Sys.Date()`)"
@@ -46,6 +46,69 @@ class: inverse, center, middle
 ### `r rmarkdown::metadata$author`
 ### `r rmarkdown::metadata$institute`
 ### (updated: `r Sys.Date()`)
+
+---
+
+# Learning Objectives
+
+* describe the principles of reproducible documents
+* apply the syntax of markdown to format text
+* format numerical results in R Markdown
+* format tables in R Markdown
+* generate figures in R Markdown
+* format references in R Markdown
+
+---
+class: inverse, center, middle
+
+# Reproducible Documents
+
+---
+
+# Overview
+
+Reproducible Documents:
+
+* a tool to embed text with other outluts
+  - code, figures, tables
+* authors only make changes in *one* place
+  - the entire document stays up to date
+  - (instead of redoing an analysis, and copying images and numbers into MS Word)
+
+---
+
+# Many Platforms Exist:
+
+* [Manubot](https://github.com/manubot/rootstock)
+* [Stencila](https://stenci.la/)
+* [Jupyter Notebooks](https://jupyter.org/)
+
+--
+
+We are going to talk about [R Markdown](https://rmarkdown.rstudio.com/) !
+* many add-ons extend functionality
+* *This lesson* is only a basic intro
+
+---
+class: inverse, center, middle
+
+# How R Markdown Works
+
+---
+
+
+
+
+
+---
+class: inverse, center, middle
+
+# Syntax
+
+---
+class: inverse, center, middle
+
+# Extensions
 
 ---
 

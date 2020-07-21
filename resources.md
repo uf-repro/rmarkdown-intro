@@ -1,15 +1,21 @@
 # Additional Resources / Readings
 
-## Syntax
+## Syntax and Guides
 
 * ["Markdown Cheatsheet"](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
   - A guide from Adam Pritchard on formatting of Markdown documents
+
+* ["R Markdown Cheatsheet"](https://rmarkdown.rstudio.com/lesson-15.html)
+  - RStudio-style cheatsheet for R Markdown
 
 ## Tutorials
 
 * ["R Markdown for Scientists"](https://rmd4sci.njtierney.com/)
   - A guide from Nick Tierney on the essentials of using R Markdown for scientists
   
+* [R Markdown](https://rmarkdown.rstudio.com/lesson-1.html)
+  - Multi-part introduction to R Markdown and output formats from R Studio.
+
 ## Related Tools
 
 * ["thesisdown"](https://github.com/ismayc/thesisdown)
