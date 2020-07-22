@@ -192,6 +192,7 @@ output:
 ### heading 3
 ```
 .center[*renders into*]
+
 # heading 1
 ## heading 2
 ### heading 3
@@ -206,6 +207,7 @@ output:
 - bullet list
 ```
 .center[*renders into*]
+
 - bullet list
   + sub-item
 - bullet list
@@ -217,17 +219,49 @@ output:
 ```
  **bold**, __bold__
  *italic*, _italic_
- > This is not a self-referential quote.
+ > This is a quote.
 ```
 .center[*renders into*]
+
  **bold**, __bold__
  
  *italic*, _italic_
  
- > This is not a self-referential quote.
+ > This is a quote
  
 ---
 
+# Links
+
+```
+https://cran.r-project.org/ or 
+[CRAN](https://cran.r-project.org/)
+```
+.center[*renders into*]
+
+https://cran.r-project.org/ or
+[CRAN](https://cran.r-project.org/)
+
+---
+class: inverse, center, middle
+
+# Code Chunks
+
+---
+# Inserting Code
+
+````
+```{r}`r ''`
+1 + 1
+```
+````
+.center[*renders into*]
+
+```{r}
+1 + 1
+```
+
+---
 class: inverse, center, middle
 
 # Extensions
