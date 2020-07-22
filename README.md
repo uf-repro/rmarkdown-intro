@@ -13,7 +13,7 @@ RMarkdown is a versatile document format that can combine text, R code, figures,
 
 By the end of the workshop, participants will be able to:
 * describe the principles of reproducible documents
-* apply the syntax of markdown to format text
+* apply markdown syntax to format text
 * run code chunks in R Markdown
 * format tables in R Markdown
 * generate figures in R Markdown
