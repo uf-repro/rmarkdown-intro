@@ -270,6 +270,7 @@ li {
 pre {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
+  white-space: pre-wrap;
 }
 .caption {
   display: none;

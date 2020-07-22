@@ -317,8 +317,64 @@ plot(mpg ~ disp, data = mtcars,
 
 # References
 
+* Get your citations into a `.bib` format. (plain-text bibtex, most reference managers can output a list in this way)
+* Add metadata to the header about the file and the *style* of citations
+* Insert citations using correct syntax.
+
 ---
-# Other Languages
+
+# References (`.bib`)
+
+`refs.bib`:
+```
+@article{Barkai_1988,
+	Author = {Amos Barkai and Christopher McQuaid},
+	Journal = {Science},
+	Number = {4875},
+	Pages = {62-64},
+	Title = {Predator-prey role reversal in a marine benthic ecosystem},
+	Volume = {242},
+	Year = {1988}}
+```
+
+---
+
+# References (YAML header)
+
+
+```yaml
+---
+title: "An example document"
+author: "Hao Ye"
+output: html_document
+bibliography: refs.bib
+csl: methods-in-ecology-and-evolution.csl
+---
+```
+
+Find Citation Style Language (CSL) files at
+* https://github.com/citation-style-language/styles
+* https://www.zotero.org/styles
+
+---
+
+# References (usage)
+
+```
+Sometimes whelks eat lobsters [@Barkai_1998].
+```
+
+.center[*renders into*]
+
+Sometimes whelks eat lobsters (Barkai and McQuaid, 1988).
+
+### References
+
+1. Barkai, A. and C. McQuaid (1988). "Predator-prey role reversal in a
+marine benthic ecosystem". In: _Science_ 242.4875, pp. 62-64.
+
+---
+# Other Coding Languages
 
 **`knitr`** supports other programming languages.
 See [Section 2.7](https://bookdown.org/yihui/rmarkdown/language-engines.html) of the R Markdown book for details.
