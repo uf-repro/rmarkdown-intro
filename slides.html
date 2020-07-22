@@ -33,7 +33,7 @@ class: inverse, center, middle
 # Learning Objectives
 
 * describe the principles of reproducible documents
-* apply the syntax of markdown to format text
+* apply markdown syntax to format text
 * format numerical results in R Markdown
 * format tables in R Markdown
 * generate figures in R Markdown
@@ -50,11 +50,11 @@ class: inverse, center, middle
 
 Reproducible Documents:
 
-* a tool to embed text with other outluts
+* a way to write reports that embed text with other outputs:
   - code, figures, tables
 * authors only make changes in *one* place
   - the entire document stays up to date
-  - (instead of redoing an analysis, and copying images and numbers into MS Word)
+  - (instead of redoing an analysis, and copying images and numbers into a separate file)
 
 ---
 
@@ -66,9 +66,8 @@ Reproducible Documents:
 
 --
 
-We are going to talk about [R Markdown](https://rmarkdown.rstudio.com/) !
-* many add-ons extend functionality
-* *This lesson* is only a basic intro
+### This lesson is a basic intro to [R Markdown](https://rmarkdown.rstudio.com/) !
+(many add-ons exist that extend functionality)
 
 ---
 class: inverse, center, middle
@@ -79,21 +78,23 @@ class: inverse, center, middle
 
 # R Markdown Tools
 
-* **`rmarkdown`** is the file-format and main interface with R
-* **`knitr`** is the underlying engine that runs R code
+* **`rmarkdown`** is the file-format and main interface with R (`*.Rmd`)
+* **`knitr`** is the underlying engine that runs code
 * `pandoc` is a software tool that converts markdown documents into other formats
+
+![A diagram from https://rmarkdown.rstudio.com/lesson-2.html, showing the workflow for R Markdown, where an Rmd file is transformed by `knitr` into a markdown file, and then by `pandoc` into multiple output files.](rmarkdownflow.png)
 
 ---
 
 # Installation
 
 * RStudio comes with `pandoc`.
-  - but it can be installed separately, as well.
+  - but it can be [installed separately](https://pandoc.org/installing.html), as well.
 * The **`rmarkdown`** package includes **`knitr`** as a dependency.
 
 --
 
-For PDF output, you will want LaTeX. The **`tinytex`** package provides a mechanism for a lightweight LaTeX install:
+For PDF output, you will want LaTeX. The [**`tinytex`** package](https://yihui.org/tinytex/) provides a mechanism for a lightweight LaTeX install:
 
 ```r
 tinytex::install_tinytex()
@@ -103,11 +104,12 @@ tinytex::install_tinytex()
 
 # Creating Documents
 
-1. R Markdown documents are plain textCreate an R Markdown document.
+1. Create an R Markdown document.
+  - R Markdown documents are plain text.
 2. Run the R code
 
 ```r
-rmarkdown::render({file})
+rmarkdown::render({document.Rmd})
 ```
 .center[**OR**]
   Use the `Knit` button in RStudio.
@@ -120,11 +122,6 @@ rmarkdown::render({file})
 For a given `document.Rmd`
 1. **`knitr`** runs the code chunks and merges the output with the remainder of `document.Rmd` into a markdown file: `document.md`
 2. `pandoc` converts the markdown into the final outputs.
-
----
-# Operation
-
-![A diagram from https://rmarkdown.rstudio.com/lesson-2.html, showing the workflow for R Markdown, where an Rmd file is transformed by `knitr` into a markdown file, and then by `pandoc` into multiple output files.](rmarkdownflow.png)
 
 ---
 class: inverse, center, middle
@@ -151,7 +148,7 @@ output: html_document
 
 ```yaml
 ---
-title: "An example document"
+title: "Chaotic Dynamics"
 author:
 - "Hao Ye"
 - "Gritty"
@@ -184,14 +181,15 @@ output:
 ```
 - bullet list
   * sub-item
-- bullet list
+1. numbered list
+1. numbered list
 ```
 .center[*renders into*]
 
 - bullet list
   + sub-item
-- bullet list
-
+1. numbered list
+1. numbered list
 ---
 
 # Syntax: text
@@ -214,12 +212,18 @@ output:
 # Links
 
 ```
-https://cran.r-project.org/ or 
+Raw URLs:
+https://cran.r-project.org/
+
+And formatted links:
 [CRAN](https://cran.r-project.org/)
 ```
 .center[*renders into*]
 
-https://cran.r-project.org/ or
+Raw URLs:
+https://cran.r-project.org/
+
+And formatted links:
 [CRAN](https://cran.r-project.org/)
 
 ---
@@ -247,14 +251,41 @@ class: inverse, center, middle
 ```
 
 ---
+# Code Chunk Options
+
+The evaluation of code chunks can be controlled through options, e.g.:
+````
+```{r, eval = FALSE}
+1 + 1
+```
+````
+.center[*renders into*]
+
+
+```r
+1 + 1
+```
+
+See the description of [chunk options](https://yihui.org/knitr/options/) for details.
+
+---
 # Inline code
 
 ````
 The square root of 10 is `r sqrt(10)`.
+Today's date is `r Sys.Date()`.
 ````
 .center[*renders into*]
 
 The square root of 10 is 3.1622777.
+
+Today's date is 2020-07-22.
+
+---
+# Other Coding Languages
+
+**`knitr`** supports other programming languages.
+See [Section 2.7](https://bookdown.org/yihui/rmarkdown/language-engines.html) of the R Markdown book for details.
 
 ---
 # Tables (markdown)
@@ -311,7 +342,7 @@ plot(mpg ~ disp, data = mtcars,
      cex = 2, cex.lab = 2, cex.axis = 2)
 ```
 
-&lt;img src="slides_files/figure-html/unnamed-chunk-9-1.png" width="400" height="400" /&gt;
+&lt;img src="slides_files/figure-html/unnamed-chunk-10-1.png" width="400" height="400" /&gt;
 
 ---
 
@@ -374,15 +405,26 @@ Sometimes whelks eat lobsters (Barkai and McQuaid, 1988).
 marine benthic ecosystem". In: _Science_ 242.4875, pp. 62-64.
 
 ---
-# Other Coding Languages
-
-**`knitr`** supports other programming languages.
-See [Section 2.7](https://bookdown.org/yihui/rmarkdown/language-engines.html) of the R Markdown book for details.
-
----
 class: inverse, center, middle
 
 # Extensions
+
+---
+# Basic Output Formats
+
+* `html_document` - a single HTML file
+* `pdf_document` - a single PDF file (requires a LaTeX installation, see the [**`tinytex`** package](https://yihui.org/tinytex/))
+* `word_document` - a single MS Word file
+* `github_document` - markdown for rendering in GitHub
+
+---
+# Other Formats
+
+MANY packages build on R Markdown to do more complex things:
+* [thesisdown](https://github.com/ismayc/thesisdown) has thesis templates
+* [blogdown](https://bookdown.org/yihui/blogdown/) for websites
+* [xaringan](https://github.com/yihui/xaringan) for interactive slides  
+  (what this uses)
 
 ---
 
