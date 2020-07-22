@@ -1,5 +1,13 @@
 # Additional Resources / Readings
 
+## Examples
+
+* ["Unequal Representation and Gender Stereotypes in Image Search Results for Occupations"](https://github.com/mjskay/gender-in-image-search)
+  - example paper (`README.Rmd`) by Kay, Matthew, Matuszek, Cynthia, and Munson, Sean.
+
+* ["Subliminal evaluative conditioning? Above-chance CS identification may be necessary and insufficient for attitude learning"](https://github.com/methexp/subliminal-EC)
+  - example paper (`main.Rmd`) by Christoph Stahl, Julia Haaf, and Olivier Corneille
+
 ## Syntax Guides
 
 * ["Markdown Cheatsheet"](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
@@ -24,11 +32,22 @@
 * ["R Markdown: The Definitive Guide"](https://bookdown.org/yihui/rmarkdown/)
   - Book from Yihui Xie, J.J. Allaire, and Garrett Grolemund on everything R Markdown.
 
-* ["kableExtra"](https://haozhu233.github.io/kableExtra/
+## Formatting and Writing Papers
+
+* ["kableExtra"](https://haozhu233.github.io/kableExtra/)
   - Website for the `kableExtra` package from Hao Zhu, which adds advanced formatting options for tables produced by `knitr::kable()`.
 
 * ["stargazer: beautiful LaTeX, HTML and ASCII tables from R statistical output"](https://cran.r-project.org/web/packages/stargazer/vignettes/stargazer.pdf)
   - Vignette from Marek Hlavac on the `stargazer` package, which produces statistical summary tables (as caommonly seen in academic articles).
+
+* ["papaja: Reproducible APA manuscripts with R Markdown"](https://crsh.github.io/papaja_man/)
+  - The `papaja` package by Frederik Aust & Marius Barth
+
+* ["rticles: Article Formats for R Markdown"](https://github.com/rstudio/rticles)
+  - The `rticles` package by J. Allaire, Xie, R Foundation, et al., that contains templates for many different journals.
+  
+* ["RStudio Addin to Insert Markdown Citations"](https://github.com/crsh/citr)
+  - The `citr` package by Frederik Aust
 
 * Collections of Citation Style Language (.csl) files:
   - https://github.com/citation-style-language/styles
