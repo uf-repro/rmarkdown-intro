@@ -1,5 +1,5 @@
 ---
-title: "A Friendly Introduction to Github for Project Version Control"
+title: "An Introduction to Writing Reproducible Manuscripts Using RMarkdown"
 author: "Hao Ye"
 institute: "Health Science Center Libraries, University of Florida"
 date: "(updated: `r Sys.Date()`)"
@@ -36,7 +36,8 @@ style_mono_accent(
                    "li" = list("margin-block-start" = "0.5em", 
                               "margin-block-end" = "0.5em"), 
                    "pre" = list("margin-top" = "0.5em", 
-                              "margin-bottom" = "0.5em")), 
+                              "margin-bottom" = "0.5em"), 
+                   ".caption" = list("display" = "none")), 
   link_color = "#339944"
 )
 ```
@@ -46,6 +47,224 @@ class: inverse, center, middle
 ### `r rmarkdown::metadata$author`
 ### `r rmarkdown::metadata$institute`
 ### (updated: `r Sys.Date()`)
+
+---
+
+# Learning Objectives
+
+* describe the principles of reproducible documents
+* apply the syntax of markdown to format text
+* format numerical results in R Markdown
+* format tables in R Markdown
+* generate figures in R Markdown
+* format references in R Markdown
+
+---
+class: inverse, center, middle
+
+# Reproducible Documents
+
+---
+
+# Overview
+
+Reproducible Documents:
+
+* a tool to embed text with other outluts
+  - code, figures, tables
+* authors only make changes in *one* place
+  - the entire document stays up to date
+  - (instead of redoing an analysis, and copying images and numbers into MS Word)
+
+---
+
+# Many Platforms Exist:
+
+* [Manubot](https://github.com/manubot/rootstock)
+* [Stencila](https://stenci.la/)
+* [Jupyter Notebooks](https://jupyter.org/)
+
+--
+
+We are going to talk about [R Markdown](https://rmarkdown.rstudio.com/) !
+* many add-ons extend functionality
+* *This lesson* is only a basic intro
+
+---
+class: inverse, center, middle
+
+# How R Markdown Works
+
+---
+
+# R Markdown Tools
+
+* **`rmarkdown`** is the file-format and main interface with R
+* **`knitr`** is the underlying engine that runs R code
+* `pandoc` is a software tool that converts markdown documents into other formats
+
+---
+
+# Installation
+
+* RStudio comes with `pandoc`.
+  - but it can be installed separately, as well.
+* The **`rmarkdown`** package includes **`knitr`** as a dependency.
+
+--
+
+For PDF output, you will want LaTeX. The **`tinytex`** package provides a mechanism for a lightweight LaTeX install:
+```{r, eval = FALSE}
+tinytex::install_tinytex()
+```
+
+---
+
+# Creating Documents
+
+1. R Markdown documents are plain textCreate an R Markdown document.
+2. Run the R code
+```{r, eval = FALSE}
+rmarkdown::render({file})
+```
+.center[**OR**]
+  Use the `Knit` button in RStudio.
+
+```{r, echo = FALSE, fig.cap = "A screenshot of the Knit button in RStudio, which appears as an image of a ball of yarn with a needle in it, next to the text 'Knit' and an optional pulldown menu in the form of a down arrow."}
+knitr::include_graphics("knit-button.png")
+```
+
+---
+# What happens during knitting?
+
+For a given `document.Rmd`
+1. **`knitr`** runs the code chunks in `document.Rmd` and merges the output with the remainder of `document.Rmd` into a markdown file: `document.md`
+2. `pandoc` converts the markdown into the final outputs.
+
+---
+# Operations
+
+```{r, echo = FALSE, fig.cap = "A diagram from https://rmarkdown.rstudio.com/lesson-2.html, showing the workflow for R Markdown, where an Rmd file is transformed by `knitr` into a markdown file, and then by `pandoc` into multiple output files."}
+knitr::include_graphics("rmarkdownflow.png")
+```
+
+---
+class: inverse, center, middle
+
+# Syntax
+
+---
+# Basic Structure
+
+R Markdown files begin with a header:
+```{yaml}
+---
+title: "An example document"
+author: "Hao Ye"
+output: html_document
+---
+```
+
+* this specifies metadata about the document that gets incorporated in the final output
+
+---
+# A More Complex Header
+```{yaml}
+---
+title: "An example document"
+author:
+- "Hao Ye"
+- "Gritty"
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
+---
+```
+
+---
+
+# Syntax: Headings
+
+```
+# heading 1
+## heading 2
+### heading 3
+```
+.center[*renders into*]
+
+# heading 1
+## heading 2
+### heading 3
+
+---
+
+# Syntax: bullets
+
+```
+- bullet list
+  * sub-item
+- bullet list
+```
+.center[*renders into*]
+
+- bullet list
+  + sub-item
+- bullet list
+
+---
+
+# Syntax: text
+
+```
+ **bold**, __bold__
+ *italic*, _italic_
+ > This is a quote.
+```
+.center[*renders into*]
+
+ **bold**, __bold__
+ 
+ *italic*, _italic_
+ 
+ > This is a quote
+ 
+---
+
+# Links
+
+```
+https://cran.r-project.org/ or 
+[CRAN](https://cran.r-project.org/)
+```
+.center[*renders into*]
+
+https://cran.r-project.org/ or
+[CRAN](https://cran.r-project.org/)
+
+---
+class: inverse, center, middle
+
+# Code Chunks
+
+---
+# Inserting Code
+
+````
+```{r}`r ''`
+1 + 1
+```
+````
+.center[*renders into*]
+
+```{r}
+1 + 1
+```
+
+---
+class: inverse, center, middle
+
+# Extensions
 
 ---
 
