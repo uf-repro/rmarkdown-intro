@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title> • An Introduction to Writing Reproducible Manuscripts Using RMarkdown</title>
+<title>Syllabus • An Introduction to Writing Reproducible Manuscripts Using RMarkdown</title>
 
 
 <!-- jquery -->
@@ -39,7 +39,7 @@
 
 
 
-<meta property="og:title" content="" />
+<meta property="og:title" content="Syllabus" />
 
 
 
@@ -71,7 +71,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">An Introduction to Writing Reproducible Manuscripts Using RMarkdown</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.9.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.0</span>
       </span>
     </div>
 
@@ -119,10 +119,415 @@
 <div class="row">
   <div class="contents col-md-9">
     <div class="page-header">
-      <h1></h1>
+      <h1>Syllabus</h1>
     </div>
 
+<div id="syllabus" class="section level1">
 
+<ul>
+<li>Learning Objectives
+<ul>
+<li>describe the principles of reproducible documents</li>
+<li>apply markdown syntax to format text</li>
+<li>format numerical results in R Markdown</li>
+<li>format tables in R Markdown</li>
+<li>generate figures in R Markdown</li>
+<li>format references in R Markdown</li>
+</ul>
+</li>
+</ul>
+<div id="reproducible-documents" class="section level2">
+<h2 class="hasAnchor">
+<a href="#reproducible-documents" class="anchor"></a>Reproducible Documents</h2>
+<ul>
+<li>
+<p>Overview</p>
+<p>Reproducible Documents:</p>
+<ul>
+<li>a way to write reports that embed text with other outputs:
+<ul>
+<li>code, figures, tables</li>
+</ul>
+</li>
+<li>authors only make changes in <em>one</em> place
+<ul>
+<li>the entire document stays up to date</li>
+<li>(instead of redoing an analysis, and copying images and numbers into a separate file)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Many Platforms Exist:</p>
+<ul>
+<li><a href="https://github.com/manubot/rootstock">Manubot</a></li>
+<li><a href="https://stenci.la/">Stencila</a></li>
+<li>
+<a href="https://jupyter.org/">Jupyter Notebooks</a> <strong>This lesson is a basic intro to <a href="https://rmarkdown.rstudio.com/">R Markdown</a> ! (many add-ons exist that extend functionality)</strong>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="how-r-markdown-works" class="section level2">
+<h2 class="hasAnchor">
+<a href="#how-r-markdown-works" class="anchor"></a>How R Markdown Works</h2>
+<ul>
+<li>
+<p>R Markdown Tools</p>
+<ul>
+<li>
+<strong><code>rmarkdown</code></strong> is the file-format and main interface with R (<code>*.Rmd</code>)</li>
+<li>
+<strong><code>knitr</code></strong> is the underlying engine that runs code</li>
+<li>
+<code>pandoc</code> is a software tool that converts markdown documents into other formats <img src="slides/rmarkdownflow.png" alt='A diagram from https://rmarkdown.rstudio.com/lesson-2.html, showing the workflow for R Markdown, where an Rmd file is transformed by knitr into a markdown file, and then by pandoc into multiple output files."'>
+</li>
+</ul>
+</li>
+<li>
+<p>Installation</p>
+<ul>
+<li>
+<p>RStudio comes with <code>pandoc</code>.</p>
+<ul>
+<li>but it can be <a href="https://pandoc.org/installing.html">installed separately</a>, as well.</li>
+</ul>
+</li>
+<li>
+<p>The <strong><code>rmarkdown</code></strong> package includes <strong><code>knitr</code></strong> as a dependency. For PDF output, you will want LaTeX. The <a href="https://yihui.org/tinytex/"><strong><code>tinytex</code></strong> package</a> provides a mechanism for a lightweight LaTeX install:</p>
+<div class="sourceCode" id="cb1"><html><pre class="r"><span class="kw pkg">tinytex</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/tinytex/man/install_tinytex.html">install_tinytex</a></span>()</pre></html></div>
+</li>
+</ul>
+</li>
+<li>
+<p>Creating Documents</p>
+<ol>
+<li>
+<p>Create an R Markdown document.</p>
+<ul>
+<li>Use the <code>New R Markdown</code> file option in RStudio, or create a plaintext file.</li>
+</ul>
+</li>
+<li>
+<p>Run the R code</p>
+<div class="sourceCode" id="cb2"><html><pre class="r"><span class="kw pkg">rmarkdown</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/rmarkdown/man/render.html">render</a></span>({<span class="no">document.Rmd</span>})</pre></html></div>
+<p><strong>OR</strong></p>
+<p>Use the <code>Knit</code> button in RStudio.</p>
+<p><img src="slides/knit-button.png" alt="A screenshot of the Knit button in RStudio, which appears as an image of a ball of yarn with a needle in it, next to the text ‘Knit’ and an optional pulldown menu in the form of a down arrow."></p>
+</li>
+</ol>
+</li>
+<li>
+<p>What happens during knitting?</p>
+<p>For a given <code>document.Rmd</code></p>
+<ol>
+<li>
+<strong><code>knitr</code></strong> runs the code chunks and merges the output with the remainder of <code>document.Rmd</code> into a markdown file: <code>document.md</code>
+</li>
+<li>
+<code>pandoc</code> converts the markdown into the final outputs.</li>
+</ol>
+</li>
+</ul>
+</div>
+<div id="syntax" class="section level2">
+<h2 class="hasAnchor">
+<a href="#syntax" class="anchor"></a>Syntax</h2>
+<ul>
+<li>
+<p>Basic Structure</p>
+<p>R Markdown files begin with a header:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1"></a><span class="pp">---</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"An example document"</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">"Hao Ye"</span></span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="fu">output</span><span class="kw">:</span><span class="at"> html_document</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="pp">---</span></span></code></pre></div>
+<ul>
+<li>this specifies metadata about the document that gets incorporated in the final output</li>
+</ul>
+</li>
+<li>
+<p>A More Complex Header</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1"></a><span class="pp">---</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Chaotic Dynamics"</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="fu">author</span><span class="kw">:</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="kw">-</span><span class="at"> </span><span class="st">"Hao Ye"</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a><span class="kw">-</span><span class="at"> </span><span class="st">"Gritty"</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a><span class="fu">output</span><span class="kw">:</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a><span class="at">  </span><span class="fu">html_document</span><span class="kw">:</span></span>
+<span id="cb4-8"><a href="#cb4-8"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb4-9"><a href="#cb4-9"></a><span class="at">    </span><span class="fu">toc_depth</span><span class="kw">:</span><span class="at"> </span><span class="dv">2</span></span>
+<span id="cb4-10"><a href="#cb4-10"></a><span class="pp">---</span></span></code></pre></div>
+</li>
+<li>
+<p>Syntax: Headings</p>
+<pre><code># heading 1
+## heading 2
+### heading 3</code></pre>
+<p><em>renders into</em></p>
+<h1 id="heading-1" class="hasAnchor">
+<a href="#syllabus" class="anchor"></a>heading 1</h1>
+<h2 id="heading-2">heading 2</h2>
+<h3 id="heading-3">heading 3</h3>
+</li>
+<li>
+<p>Syntax: bullets</p>
+<pre><code>- bullet list
+    + sub-item
+1. numbered list
+1. numbered list</code></pre>
+<p><em>renders into</em></p>
+<ul>
+<li>bullet list
+<ul>
+<li>sub-item</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>numbered list</li>
+<li>numbered list</li>
+</ol>
+</li>
+<li>
+<p>Syntax: text</p>
+<pre><code> **bold**, __bold__
+ *italic*, _italic_
+ &gt; This is a quote.</code></pre>
+<p><em>renders into</em></p>
+<p><strong>bold</strong>, <strong>bold</strong></p>
+<p><em>italic</em>, <em>italic</em></p>
+<blockquote>
+<p>This is a quote</p>
+</blockquote>
+</li>
+<li>
+<p>Links</p>
+<pre><code>Raw URLs:
+https://cran.r-project.org/
+
+And formatted links:
+[CRAN](https://cran.r-project.org/)</code></pre>
+<p><em>renders into</em></p>
+<p>Raw URLs: <a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a></p>
+<p>And formatted links: <a href="https://cran.r-project.org/">CRAN</a></p>
+</li>
+</ul>
+</div>
+<div id="code-chunks" class="section level2">
+<h2 class="hasAnchor">
+<a href="#code-chunks" class="anchor"></a>Code Chunks</h2>
+<ul>
+<li>
+<p>Inserting Code</p>
+<pre><code>```{r}
+1 + 1
+```</code></pre>
+<p><em>renders into</em></p>
+<div class="sourceCode" id="cb10"><html><pre class="r"><span class="fl">1</span> + <span class="fl">1</span></pre></html></div>
+<pre><code>## [1] 2</code></pre>
+</li>
+<li>
+<p>Code Chunk Options</p>
+<p>The evaluation of code chunks can be controlled through options, e.g.:</p>
+<pre><code>```{r, eval = FALSE}
+1 + 1
+```</code></pre>
+<p><em>renders into</em></p>
+<pre><code>1 + 1</code></pre>
+<p>See the description of <a href="https://yihui.org/knitr/options/">chunk options</a> for details.</p>
+</li>
+<li>
+<p>Inline code</p>
+<pre><code>The square root of 10 is `r sqrt(10)`.
+Today's date is `r Sys.Date()`.</code></pre>
+<p><em>renders into</em></p>
+<p>The square root of 10 is 3.1622777.</p>
+<p>Today’s date is 2020-07-23.</p>
+</li>
+<li>
+<p>Other Coding Languages</p>
+<p><strong><code>knitr</code></strong> supports other programming languages.</p>
+<p>See <a href="https://bookdown.org/yihui/rmarkdown/language-engines.html">Section 2.7</a> of the R Markdown book for details.</p>
+</li>
+<li>
+<p>Tables (markdown)</p>
+<pre><code>| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |</code></pre>
+<p><em>renders into</em></p>
+<table>
+<thead><tr class="header">
+<th>Tables</th>
+<th align="center">Are</th>
+<th align="right">Cool</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>col 3 is</td>
+<td align="center">right-aligned</td>
+<td align="right">$1600</td>
+</tr>
+<tr class="even">
+<td>col 2 is</td>
+<td align="center">centered</td>
+<td align="right">$12</td>
+</tr>
+<tr class="odd">
+<td>zebra stripes</td>
+<td align="center">are neat</td>
+<td align="right">$1</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Tables (R code)</p>
+<pre><code>```{r, results="asis"}
+knitr::kable(mtcars[1:4,1:3], 
+             format = "markdown")
+```</code></pre>
+<p><em>renders into</em></p>
+<table>
+<thead><tr class="header">
+<th align="left"></th>
+<th align="right">mpg</th>
+<th align="right">cyl</th>
+<th align="right">disp</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="left">Mazda RX4</td>
+<td align="right">21.0</td>
+<td align="right">6</td>
+<td align="right">160</td>
+</tr>
+<tr class="even">
+<td align="left">Mazda RX4 Wag</td>
+<td align="right">21.0</td>
+<td align="right">6</td>
+<td align="right">160</td>
+</tr>
+<tr class="odd">
+<td align="left">Datsun 710</td>
+<td align="right">22.8</td>
+<td align="right">4</td>
+<td align="right">108</td>
+</tr>
+<tr class="even">
+<td align="left">Hornet 4 Drive</td>
+<td align="right">21.4</td>
+<td align="right">6</td>
+<td align="right">258</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Figures (images)</p>
+<pre><code>![Nyan Cat: animated gif of a grey cat with a pop-tart body flying through space and leaving a rainbow trail behind](https://s3-us-west-2.amazonaws.com/webcitation/7eb1102857c5c8b4fcccb53cd2e84520496841f0)</code></pre>
+<p><img src="https://s3-us-west-2.amazonaws.com/webcitation/7eb1102857c5c8b4fcccb53cd2e84520496841f0" alt="Nyan Cat: animated gif of a grey cat with a pop-tart body flying through space and leaving a rainbow trail behind"></p>
+</li>
+<li>
+<p>Figures (code)</p>
+<pre><code><a href="https://rdrr.io/r/base/plot.html">plot(mpg ~ disp, data = mtcars, 
+     cex = 2, cex.lab = 2, cex.axis = 2)</a></code></pre>
+<p><img src="plot.png"></p>
+</li>
+<li>
+<p>References</p>
+<ul>
+<li>Get your citations into a <code>.bib</code> format. (plain-text bibtex, most reference managers can output a list in this way)</li>
+<li>Add metadata to the header about the file and the <em>style</em> of citations</li>
+<li>Insert citations using <code>[@{bibentry}]</code>, where <code>{bibentry}</code> is the unique identifier for the reference in the bibliography.
+<ul>
+<li>see also the <a href="https://github.com/crsh/citr"><code>citr</code> add-in</a>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>References (<code>.bib</code>) <code>refs.bib</code>:</p>
+<pre><code>@article{Barkai_1988,
+  Author = {Amos Barkai and Christopher McQuaid},
+  Journal = {Science},
+  Number = {4875},
+  Pages = {62-64},
+  Title = {Predator-prey role reversal in a marine benthic ecosystem},
+  Volume = {242},
+  Year = {1988}}</code></pre>
+</li>
+<li>
+<p>References (YAML header)</p>
+<pre class="{yaml}"><code>---
+title: "An example document"
+author: "Hao Ye"
+output: html_document
+bibliography: refs.bib
+csl: methods-in-ecology-and-evolution.csl
+---</code></pre>
+<p>Find Citation Style Language (CSL) files at</p>
+<ul>
+<li><a href="https://github.com/citation-style-language/styles" class="uri">https://github.com/citation-style-language/styles</a></li>
+<li><a href="https://www.zotero.org/styles" class="uri">https://www.zotero.org/styles</a></li>
+</ul>
+</li>
+<li>
+<p>References (usage)</p>
+<pre><code>Sometimes whelks eat lobsters [@Barkai_1998].</code></pre>
+<p><em>renders into</em></p>
+<p>Sometimes whelks eat lobsters (Barkai and McQuaid, 1988).</p>
+<h3 id="references">References</h3>
+<ol>
+<li>Barkai, A. and C. McQuaid (1988). “Predator-prey role reversal in a marine benthic ecosystem”. In: <em>Science</em> 242.4875, pp. 62-64.</li>
+</ol>
+</li>
+</ul>
+</div>
+<div id="extensions" class="section level2">
+<h2 class="hasAnchor">
+<a href="#extensions" class="anchor"></a>Extensions</h2>
+<ul>
+<li>Basic Output Formats
+<ul>
+<li>
+<code>html_document</code> - a single HTML file</li>
+<li>
+<code>pdf_document</code> - a single PDF file (requires a LaTeX installation, see the <a href="https://yihui.org/tinytex/"><strong><code>tinytex</code></strong> package</a>)</li>
+<li>
+<code>word_document</code> - a single MS Word file</li>
+<li>
+<code>github_document</code> - markdown for rendering in GitHub</li>
+</ul>
+</li>
+<li>Other Formats MANY packages build on R Markdown to do more complex things:
+<ul>
+<li>
+<a href="https://github.com/ismayc/thesisdown">thesisdown</a> has thesis templates</li>
+<li>
+<a href="https://bookdown.org/yihui/blogdown/">blogdown</a> for websites</li>
+<li>
+<a href="https://github.com/yihui/xaringan">xaringan</a> for interactive slides<br>
+(what this uses)</li>
+</ul>
+</li>
+<li>Thanks
+<ul>
+<li>Let me know what content you’d like to see</li>
+<li>Contact me for additional questions or consultation requests!</li>
+<li>Check back in on the libguide for more modules and contact info:
+<ul>
+<li><a href="https://guides.uflib.ufl.edu/reproducibility" class="uri">https://guides.uflib.ufl.edu/reproducibility</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
 
   </div>
 
