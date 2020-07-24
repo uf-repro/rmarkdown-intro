@@ -3,6 +3,7 @@
 
 <!-- badges: start -->
 [![GitHub Actions pkgdown workflow](https://github.com/uf-repro/rmarkdown-intro/workflows/pkgdown/badge.svg)](https://github.com/uf-repro/rmarkdown-intro/actions?query=workflow%3Apkgdown)
+[![DOI](https://zenodo.org/badge/277827412.svg)](https://zenodo.org/badge/latestdoi/277827412)
 <!-- badges: end -->
 
 ## Description
