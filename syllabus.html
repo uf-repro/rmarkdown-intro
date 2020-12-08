@@ -124,8 +124,19 @@
 
 <div id="syllabus" class="section level1">
 
+<p>Hao Ye Health Science Center Libraries, University of Florida (updated: 2020-12-08)</p>
+<div id="intro" class="section level2">
+<h2 class="hasAnchor">
+<a href="#intro" class="anchor"></a>Intro</h2>
 <ul>
-<li>Learning Objectives
+<li>
+<p>An Introduction to Writing Reproducible Manuscripts Using RMarkdown</p>
+<h3 id="hao-ye">Hao Ye</h3>
+<h3 id="health-science-center-libraries-university-of-florida">Health Science Center Libraries, University of Florida</h3>
+<h3 id="updated-2020-12-08">(updated: 2020-12-08)</h3>
+</li>
+<li>
+<p>Learning Objectives</p>
 <ul>
 <li>describe the principles of reproducible documents</li>
 <li>apply markdown syntax to format text</li>
@@ -136,13 +147,12 @@
 </ul>
 </li>
 </ul>
+</div>
 <div id="reproducible-documents" class="section level2">
 <h2 class="hasAnchor">
 <a href="#reproducible-documents" class="anchor"></a>Reproducible Documents</h2>
 <ul>
-<li>
-<p>Overview</p>
-<p>Reproducible Documents:</p>
+<li>Overview Reproducible Documents:
 <ul>
 <li>a way to write reports that embed text with other outputs:
 <ul>
@@ -157,14 +167,14 @@
 </li>
 </ul>
 </li>
-<li>
-<p>Many Platforms Exist:</p>
+<li>Many Platforms Exist:
 <ul>
 <li><a href="https://github.com/manubot/rootstock">Manubot</a></li>
 <li><a href="https://stenci.la/">Stencila</a></li>
 <li>
-<a href="https://jupyter.org/">Jupyter Notebooks</a> <strong>This lesson is a basic intro to <a href="https://rmarkdown.rstudio.com/">R Markdown</a> ! (many add-ons exist that extend functionality)</strong>
-</li>
+<h2 id="jupyter-notebooks"><a href="https://jupyter.org/">Jupyter Notebooks</a></h2>
+<h3 id="this-lesson-is-a-basic-intro-to-r-markdown-">This lesson is a basic intro to <a href="https://rmarkdown.rstudio.com/">R Markdown</a> !</h3>
+(many add-ons exist that extend functionality)</li>
 </ul>
 </li>
 </ul>
@@ -173,54 +183,46 @@
 <h2 class="hasAnchor">
 <a href="#how-r-markdown-works" class="anchor"></a>How R Markdown Works</h2>
 <ul>
-<li>
-<p>R Markdown Tools</p>
+<li>R Markdown Tools
 <ul>
 <li>
 <strong><code>rmarkdown</code></strong> is the file-format and main interface with R (<code>*.Rmd</code>)</li>
 <li>
 <strong><code>knitr</code></strong> is the underlying engine that runs code</li>
 <li>
-<code>pandoc</code> is a software tool that converts markdown documents into other formats <img src="slides/rmarkdownflow.png" alt='A diagram from https://rmarkdown.rstudio.com/lesson-2.html, showing the workflow for R Markdown, where an Rmd file is transformed by knitr into a markdown file, and then by pandoc into multiple output files."'>
+<code>pandoc</code> is a software tool that converts markdown documents into other formats <img src="rmarkdownflow.png" alt="A diagram from https://rmarkdown.rstudio.com/lesson-2.html, showing the workflow for R Markdown, where an Rmd file is transformed by knitr into a markdown file, and then by pandoc into multiple output files.">
 </li>
 </ul>
 </li>
-<li>
-<p>Installation</p>
+<li>Installation
 <ul>
-<li>
-<p>RStudio comes with <code>pandoc</code>.</p>
+<li>RStudio comes with <code>pandoc</code>.
 <ul>
 <li>but it can be <a href="https://pandoc.org/installing.html">installed separately</a>, as well.</li>
 </ul>
 </li>
 <li>
-<p>The <strong><code>rmarkdown</code></strong> package includes <strong><code>knitr</code></strong> as a dependency. For PDF output, you will want LaTeX. The <a href="https://yihui.org/tinytex/"><strong><code>tinytex</code></strong> package</a> provides a mechanism for a lightweight LaTeX install:</p>
-<div class="sourceCode" id="cb1"><html><pre class="r"><span class="kw pkg">tinytex</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/tinytex/man/install_tinytex.html">install_tinytex</a></span>()</pre></html></div>
-</li>
+<h2 id="the-rmarkdown-package-includes-knitr-as-a-dependency">The <strong><code>rmarkdown</code></strong> package includes <strong><code>knitr</code></strong> as a dependency.</h2>
+For PDF output, you will want LaTeX. The <a href="https://yihui.org/tinytex/"><strong><code>tinytex</code></strong> package</a> provides a mechanism for a lightweight LaTeX install:</li>
 </ul>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">tinytex</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/tinytex/man/install_tinytex.html">install_tinytex</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 </li>
-<li>
-<p>Creating Documents</p>
+<li>Creating Documents
 <ol>
-<li>
-<p>Create an R Markdown document.</p>
+<li>Create an R Markdown document.</li>
+</ol>
 <ul>
 <li>Use the <code>New R Markdown</code> file option in RStudio, or create a plaintext file.</li>
 </ul>
-</li>
-<li>
-<p>Run the R code</p>
-<div class="sourceCode" id="cb2"><html><pre class="r"><span class="kw pkg">rmarkdown</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/rmarkdown/man/render.html">render</a></span>({<span class="no">document.Rmd</span>})</pre></html></div>
-<p><strong>OR</strong></p>
-<p>Use the <code>Knit</code> button in RStudio.</p>
-<p><img src="slides/knit-button.png" alt="A screenshot of the Knit button in RStudio, which appears as an image of a ball of yarn with a needle in it, next to the text ‘Knit’ and an optional pulldown menu in the form of a down arrow."></p>
-</li>
+<ol>
+<li>Run the R code</li>
 </ol>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">rmarkdown</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/rmarkdown/man/render.html">render</a></span><span class="op">(</span><span class="op">{</span><span class="va">document.Rmd</span><span class="op">}</span><span class="op">)</span></code></pre></div>
+.center[<strong>OR</strong>] Use the <code>Knit</code> button in RStudio. <img src="knit-button.png" alt="A screenshot of the Knit button in RStudio, which appears as an image of a ball of yarn with a needle in it, next to the text ‘Knit’ and an optional pulldown menu in the form of a down arrow.">
 </li>
-<li>
-<p>What happens during knitting?</p>
-<p>For a given <code>document.Rmd</code></p>
+<li>What happens during knitting? For a given <code>document.Rmd</code>
 <ol>
 <li>
 <strong><code>knitr</code></strong> runs the code chunks and merges the output with the remainder of <code>document.Rmd</code> into a markdown file: <code>document.md</code>
@@ -236,48 +238,44 @@
 <a href="#syntax" class="anchor"></a>Syntax</h2>
 <ul>
 <li>
-<p>Basic Structure</p>
-<p>R Markdown files begin with a header:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1"></a><span class="pp">---</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"An example document"</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">"Hao Ye"</span></span>
-<span id="cb3-4"><a href="#cb3-4"></a><span class="fu">output</span><span class="kw">:</span><span class="at"> html_document</span></span>
-<span id="cb3-5"><a href="#cb3-5"></a><span class="pp">---</span></span></code></pre></div>
+<p>Basic Structure R Markdown files begin with a header:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"An example document"</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">"Hao Ye"</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="fu">output</span><span class="kw">:</span><span class="at"> html_document</span></span></code></pre></div>
 <ul>
 <li>this specifies metadata about the document that gets incorporated in the final output</li>
 </ul>
 </li>
 <li>
 <p>A More Complex Header</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1"></a><span class="pp">---</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Chaotic Dynamics"</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a><span class="fu">author</span><span class="kw">:</span></span>
-<span id="cb4-4"><a href="#cb4-4"></a><span class="kw">-</span><span class="at"> </span><span class="st">"Hao Ye"</span></span>
-<span id="cb4-5"><a href="#cb4-5"></a><span class="kw">-</span><span class="at"> </span><span class="st">"Gritty"</span></span>
-<span id="cb4-6"><a href="#cb4-6"></a><span class="fu">output</span><span class="kw">:</span></span>
-<span id="cb4-7"><a href="#cb4-7"></a><span class="at">  </span><span class="fu">html_document</span><span class="kw">:</span></span>
-<span id="cb4-8"><a href="#cb4-8"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb4-9"><a href="#cb4-9"></a><span class="at">    </span><span class="fu">toc_depth</span><span class="kw">:</span><span class="at"> </span><span class="dv">2</span></span>
-<span id="cb4-10"><a href="#cb4-10"></a><span class="pp">---</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Chaotic Dynamics"</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="fu">author</span><span class="kw">:</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="kw">-</span><span class="at"> </span><span class="st">"Hao Ye"</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="kw">-</span><span class="at"> </span><span class="st">"Gritty"</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a><span class="fu">output</span><span class="kw">:</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a><span class="at">  </span><span class="fu">html_document</span><span class="kw">:</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb4-8"><a href="#cb4-8"></a><span class="at">    </span><span class="fu">toc_depth</span><span class="kw">:</span><span class="at"> </span><span class="dv">2</span></span></code></pre></div>
 </li>
+<li><p>Syntax: Headings ```</p></li>
 <li>
-<p>Syntax: Headings</p>
-<pre><code># heading 1
-## heading 2
-### heading 3</code></pre>
-<p><em>renders into</em></p>
-<h1 id="heading-1" class="hasAnchor">
-<a href="#syllabus" class="anchor"></a>heading 1</h1>
+<p>heading 1</p>
 <h2 id="heading-2">heading 2</h2>
 <h3 id="heading-3">heading 3</h3>
+<p>``` .center[<em>renders into</em>]</p>
+</li>
+<li>
+<p>heading 1</p>
+<h2 id="heading-2-1">heading 2</h2>
+<h3 id="heading-3-1">heading 3</h3>
 </li>
 <li>
 <p>Syntax: bullets</p>
 <pre><code>- bullet list
-    + sub-item
+  * sub-item
 1. numbered list
 1. numbered list</code></pre>
-<p><em>renders into</em></p>
+<p>.center[<em>renders into</em>]</p>
 <ul>
 <li>bullet list
 <ul>
@@ -295,9 +293,7 @@
 <pre><code> **bold**, __bold__
  *italic*, _italic_
  &gt; This is a quote.</code></pre>
-<p><em>renders into</em></p>
-<p><strong>bold</strong>, <strong>bold</strong></p>
-<p><em>italic</em>, <em>italic</em></p>
+<p>.center[<em>renders into</em>] <strong>bold</strong>, <strong>bold</strong> <em>italic</em>, <em>italic</em></p>
 <blockquote>
 <p>This is a quote</p>
 </blockquote>
@@ -306,12 +302,9 @@
 <p>Links</p>
 <pre><code>Raw URLs:
 https://cran.r-project.org/
-
 And formatted links:
 [CRAN](https://cran.r-project.org/)</code></pre>
-<p><em>renders into</em></p>
-<p>Raw URLs: <a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a></p>
-<p>And formatted links: <a href="https://cran.r-project.org/">CRAN</a></p>
+<p>.center[<em>renders into</em>] Raw URLs: <a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a> And formatted links: <a href="https://cran.r-project.org/">CRAN</a></p>
 </li>
 </ul>
 </div>
@@ -324,33 +317,28 @@ And formatted links:
 <pre><code>```{r}
 1 + 1
 ```</code></pre>
-<p><em>renders into</em></p>
-<div class="sourceCode" id="cb10"><html><pre class="r"><span class="fl">1</span> + <span class="fl">1</span></pre></html></div>
+<p>.center[<em>renders into</em>]</p>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fl">1</span> <span class="op">+</span> <span class="fl">1</span></code></pre></div>
 <pre><code>## [1] 2</code></pre>
 </li>
 <li>
-<p>Code Chunk Options</p>
-<p>The evaluation of code chunks can be controlled through options, e.g.:</p>
+<p>Code Chunk Options The evaluation of code chunks can be controlled through options, e.g.:</p>
 <pre><code>```{r, eval = FALSE}
 1 + 1
 ```</code></pre>
-<p><em>renders into</em></p>
-<pre><code>1 + 1</code></pre>
+<p>.center[<em>renders into</em>]</p>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fl">1</span> <span class="op">+</span> <span class="fl">1</span></code></pre></div>
 <p>See the description of <a href="https://yihui.org/knitr/options/">chunk options</a> for details.</p>
 </li>
 <li>
 <p>Inline code</p>
 <pre><code>The square root of 10 is `r sqrt(10)`.
 Today's date is `r Sys.Date()`.</code></pre>
-<p><em>renders into</em></p>
-<p>The square root of 10 is 3.1622777.</p>
-<p>Today’s date is 2020-07-23.</p>
+<p>.center[<em>renders into</em>] The square root of 10 is 3.1622777. Today’s date is 2020-12-08.</p>
 </li>
-<li>
-<p>Other Coding Languages</p>
-<p><strong><code>knitr</code></strong> supports other programming languages.</p>
-<p>See <a href="https://bookdown.org/yihui/rmarkdown/language-engines.html">Section 2.7</a> of the R Markdown book for details.</p>
-</li>
+<li><p>Other Coding Languages <strong><code>knitr</code></strong> supports other programming languages. See <a href="https://bookdown.org/yihui/rmarkdown/language-engines.html">Section 2.7</a> of the R Markdown book for details.</p></li>
 <li>
 <p>Tables (markdown)</p>
 <pre><code>| Tables        | Are           | Cool  |
@@ -358,31 +346,7 @@ Today's date is `r Sys.Date()`.</code></pre>
 | col 3 is      | right-aligned | $1600 |
 | col 2 is      | centered      |   $12 |
 | zebra stripes | are neat      |    $1 |</code></pre>
-<p><em>renders into</em></p>
-<table>
-<thead><tr class="header">
-<th>Tables</th>
-<th align="center">Are</th>
-<th align="right">Cool</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td>col 3 is</td>
-<td align="center">right-aligned</td>
-<td align="right">$1600</td>
-</tr>
-<tr class="even">
-<td>col 2 is</td>
-<td align="center">centered</td>
-<td align="right">$12</td>
-</tr>
-<tr class="odd">
-<td>zebra stripes</td>
-<td align="center">are neat</td>
-<td align="right">$1</td>
-</tr>
-</tbody>
-</table>
+<p>.center[<em>renders into</em>] | Tables | Are | Cool | | ————- |:————-:| —–:| | col 3 is | right-aligned | $1600 | | col 2 is | centered | $12 | | zebra stripes | are neat | $1 |</p>
 </li>
 <li>
 <p>Tables (R code)</p>
@@ -390,41 +354,7 @@ Today's date is `r Sys.Date()`.</code></pre>
 knitr::kable(mtcars[1:4,1:3], 
              format = "markdown")
 ```</code></pre>
-<p><em>renders into</em></p>
-<table>
-<thead><tr class="header">
-<th align="left"></th>
-<th align="right">mpg</th>
-<th align="right">cyl</th>
-<th align="right">disp</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td align="left">Mazda RX4</td>
-<td align="right">21.0</td>
-<td align="right">6</td>
-<td align="right">160</td>
-</tr>
-<tr class="even">
-<td align="left">Mazda RX4 Wag</td>
-<td align="right">21.0</td>
-<td align="right">6</td>
-<td align="right">160</td>
-</tr>
-<tr class="odd">
-<td align="left">Datsun 710</td>
-<td align="right">22.8</td>
-<td align="right">4</td>
-<td align="right">108</td>
-</tr>
-<tr class="even">
-<td align="left">Hornet 4 Drive</td>
-<td align="right">21.4</td>
-<td align="right">6</td>
-<td align="right">258</td>
-</tr>
-</tbody>
-</table>
+<p>.center[<em>renders into</em>] | | mpg| cyl| disp| |:————–|—-:|—:|—-:| |Mazda RX4 | 21.0| 6| 160| |Mazda RX4 Wag | 21.0| 6| 160| |Datsun 710 | 22.8| 4| 108| |Hornet 4 Drive | 21.4| 6| 258|</p>
 </li>
 <li>
 <p>Figures (images)</p>
@@ -433,9 +363,10 @@ knitr::kable(mtcars[1:4,1:3],
 </li>
 <li>
 <p>Figures (code)</p>
-<pre><code><a href="https://rdrr.io/r/base/plot.html">plot(mpg ~ disp, data = mtcars, 
-     cex = 2, cex.lab = 2, cex.axis = 2)</a></code></pre>
-<p><img src="plot.png"></p>
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">mpg</span> <span class="op">~</span> <span class="va">disp</span>, data <span class="op">=</span> <span class="va">mtcars</span>, 
+     cex <span class="op">=</span> <span class="fl">2</span>, cex.lab <span class="op">=</span> <span class="fl">2</span>, cex.axis <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></code></pre></div>
+<p><img src="/Users/runner/work/rmarkdown-intro/rmarkdown-intro/slides_temp_files/figure-html/unnamed-chunk-10-1.png" width="400" height="400"></p>
 </li>
 <li>
 <p>References</p>
@@ -462,13 +393,11 @@ knitr::kable(mtcars[1:4,1:3],
 </li>
 <li>
 <p>References (YAML header)</p>
-<pre class="{yaml}"><code>---
-title: "An example document"
-author: "Hao Ye"
-output: html_document
-bibliography: refs.bib
-csl: methods-in-ecology-and-evolution.csl
----</code></pre>
+<div class="sourceCode" id="cb19"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"An example document"</span></span>
+<span id="cb19-2"><a href="#cb19-2"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">"Hao Ye"</span></span>
+<span id="cb19-3"><a href="#cb19-3"></a><span class="fu">output</span><span class="kw">:</span><span class="at"> html_document</span></span>
+<span id="cb19-4"><a href="#cb19-4"></a><span class="fu">bibliography</span><span class="kw">:</span><span class="at"> refs.bib</span></span>
+<span id="cb19-5"><a href="#cb19-5"></a><span class="fu">csl</span><span class="kw">:</span><span class="at"> methods-in-ecology-and-evolution.csl</span></span></code></pre></div>
 <p>Find Citation Style Language (CSL) files at</p>
 <ul>
 <li><a href="https://github.com/citation-style-language/styles" class="uri">https://github.com/citation-style-language/styles</a></li>
@@ -478,11 +407,16 @@ csl: methods-in-ecology-and-evolution.csl
 <li>
 <p>References (usage)</p>
 <pre><code>Sometimes whelks eat lobsters [@Barkai_1998].</code></pre>
-<p><em>renders into</em></p>
-<p>Sometimes whelks eat lobsters (Barkai and McQuaid, 1988).</p>
+<p>.center[<em>renders into</em>]</p>
+<pre><code>## Loading required namespace: bibtex</code></pre>
+<pre><code>## Sorry this feature currently cannot be used without the "bibtex" package installed.
+## Please install from GitHub using the "remotes" (or "devtools") package:
+## 
+## remotes::install_github("ROpenSci/bibtex")</code></pre>
+<p>Sometimes whelks eat lobsters .</p>
 <h3 id="references">References</h3>
 <ol>
-<li>Barkai, A. and C. McQuaid (1988). “Predator-prey role reversal in a marine benthic ecosystem”. In: <em>Science</em> 242.4875, pp. 62-64.</li>
+<li>NULL</li>
 </ol>
 </li>
 </ul>
@@ -514,15 +448,17 @@ csl: methods-in-ecology-and-evolution.csl
 (what this uses)</li>
 </ul>
 </li>
-<li>Thanks
+</ul>
+</div>
+<div id="thanks" class="section level2">
+<h2 class="hasAnchor">
+<a href="#thanks" class="anchor"></a>Thanks</h2>
 <ul>
 <li>Let me know what content you’d like to see</li>
 <li>Contact me for additional questions or consultation requests!</li>
 <li>Check back in on the libguide for more modules and contact info:
 <ul>
 <li><a href="https://guides.uflib.ufl.edu/reproducibility" class="uri">https://guides.uflib.ufl.edu/reproducibility</a></li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -547,7 +483,7 @@ csl: methods-in-ecology-and-evolution.csl
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.9000.</p>
 </div>
 
       </footer>
