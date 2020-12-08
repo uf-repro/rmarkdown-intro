@@ -1,4 +1,9 @@
-^RMDintro\.Rproj$
+^rmarkdown-intro\.Rproj$
 ^\.Rproj\.user$
 ^\.github$
 ^LICENSE\.md$
+^slides/*$
+^.zenodo\.json$
+^_pkgdown\.yml$
+^resources\.md$
+

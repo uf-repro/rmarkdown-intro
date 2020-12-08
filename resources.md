@@ -32,13 +32,21 @@
 * ["R Markdown: The Definitive Guide"](https://bookdown.org/yihui/rmarkdown/)
   - Book from Yihui Xie, J.J. Allaire, and Garrett Grolemund on everything R Markdown.
 
-## Formatting and Writing Papers
+## Formatting Tips
+
+* ["How I Teach R Markdown"](https://alison.rbind.io/post/2020-05-28-how-i-teach-r-markdown/)
+  - Blogpost from Alison Hill on *teaching* Rmarkdown, that nonetheless contains useful tips.
 
 * ["kableExtra"](https://haozhu233.github.io/kableExtra/)
   - Website for the `kableExtra` package from Hao Zhu, which adds advanced formatting options for tables produced by `knitr::kable()`.
 
 * ["stargazer: beautiful LaTeX, HTML and ASCII tables from R statistical output"](https://cran.r-project.org/web/packages/stargazer/vignettes/stargazer.pdf)
   - Vignette from Marek Hlavac on the `stargazer` package, which produces statistical summary tables (as caommonly seen in academic articles).
+
+* ["gt"](https://gt.rstudio.com/)
+  - The `gt` package for publication-ready tables.
+
+## Writing Papers
 
 * ["papaja: Reproducible APA manuscripts with R Markdown"](https://crsh.github.io/papaja_man/)
   - The `papaja` package by Frederik Aust & Marius Barth
@@ -66,6 +74,9 @@
 
 * ["blogdown"](https://bookdown.org/yihui/blogdown/)
   - R package that extends R Markdown for generating personal websites (this guide from Yihui Xie, Amber Thomas, and Alison Presmanes Hill is my recommendation for where to start)
+
+* ["Distill for R Markdown"](https://rstudio.github.io/distill/)
+  - R package for publishing scientific and technical writing to the web (without additional software dependencies), from RStudio folks.
   
 * ["Presentation Ninja with xaringan"](https://slides.yihui.org/xaringan/#1)
   - Slides from Yihui Xie on the `xaringan` package, for slides rendered using `remark.js`.

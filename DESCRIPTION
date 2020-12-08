@@ -12,10 +12,10 @@ License: CC BY 4.0
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.1
 Imports:
     RefManageR, 
     showtext,
-    xaringan,
+    xaringan (>= 0.18),
     xaringanthemer
 URL: https://github.com/uf-repro/rmarkdown-intro
