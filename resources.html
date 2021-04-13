@@ -44,6 +44,8 @@
 
 
 
+
+
 <!-- mathjax -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script>
@@ -55,9 +57,16 @@
 
 
 
+
+  
+
+  
+
   </head>
 
   <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-title-body">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -71,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">An Introduction to Writing Reproducible Manuscripts Using RMarkdown</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.1.0</span>
       </span>
     </div>
 
@@ -80,15 +89,9 @@
         <li>
   <a></a>
 </li>
-<li>
-  <a></a>
-</li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="syllabus.html">Syllabus</a>
-</li>
-<li>
   <a href="slides.html">Slides</a>
 </li>
 <li>
@@ -96,13 +99,13 @@
 </li>
 <li>
   <a href="index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
 <li>
   <a href="https://github.com/uf-repro/rmarkdown-intro/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -124,18 +127,18 @@
 
 <div id="additional-resources--readings" class="section level1">
 
-<div id="examples" class="section level2">
+<div id="example-research-papers" class="section level2">
 <h2 class="hasAnchor">
-<a href="#examples" class="anchor"></a>Examples</h2>
+<a href="#example-research-papers" class="anchor"></a>Example Research Papers</h2>
 <ul>
 <li>
-<a href="https://github.com/mjskay/gender-in-image-search">“Unequal Representation and Gender Stereotypes in Image Search Results for Occupations”</a>
+<a href="https://github.com/mjskay/gender-in-image-search" class="external-link">“Unequal Representation and Gender Stereotypes in Image Search Results for Occupations”</a>
 <ul>
 <li>example paper (<code>README.Rmd</code>) by Kay, Matthew, Matuszek, Cynthia, and Munson, Sean.</li>
 </ul>
 </li>
 <li>
-<a href="https://github.com/methexp/subliminal-EC">“Subliminal evaluative conditioning? Above-chance CS identification may be necessary and insufficient for attitude learning”</a>
+<a href="https://github.com/methexp/subliminal-EC" class="external-link">“Subliminal evaluative conditioning? Above-chance CS identification may be necessary and insufficient for attitude learning”</a>
 <ul>
 <li>example paper (<code>main.Rmd</code>) by Christoph Stahl, Julia Haaf, and Olivier Corneille</li>
 </ul>
@@ -147,13 +150,13 @@
 <a href="#syntax-guides" class="anchor"></a>Syntax Guides</h2>
 <ul>
 <li>
-<a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">“Markdown Cheatsheet”</a>
+<a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" class="external-link">“Markdown Cheatsheet”</a>
 <ul>
 <li>A guide from Adam Pritchard on formatting of Markdown documents</li>
 </ul>
 </li>
 <li>
-<a href="https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf">“R Markdown Cheatsheet”</a>
+<a href="https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf" class="external-link">“R Markdown Cheatsheet”</a>
 <ul>
 <li>RStudio-style cheatsheet for R Markdown</li>
 </ul>
@@ -165,13 +168,13 @@
 <a href="#tutorials" class="anchor"></a>Tutorials</h2>
 <ul>
 <li>
-<a href="https://rmd4sci.njtierney.com/">“R Markdown for Scientists”</a>
+<a href="https://rmd4sci.njtierney.com/" class="external-link">“R Markdown for Scientists”</a>
 <ul>
-<li>A guide from Nick Tierney on the essentials of using R Markdown for scientists</li>
+<li>A self-guided tutorial on the essentials of R Markdown reports from Nick Tierney</li>
 </ul>
 </li>
 <li>
-<a href="https://rmarkdown.rstudio.com/lesson-1.html">R Markdown</a>
+<a href="https://rmarkdown.rstudio.com/lesson-1.html" class="external-link">R Markdown</a>
 <ul>
 <li>Multi-part introduction to R Markdown and output formats from R Studio.</li>
 </ul>
@@ -183,13 +186,13 @@
 <a href="#reference" class="anchor"></a>Reference</h2>
 <ul>
 <li>
-<a href="https://yihui.org/knitr/options/">“Chunk options and package options”</a>
+<a href="https://yihui.org/knitr/options/" class="external-link">“Chunk options and package options”</a>
 <ul>
 <li>Book section from Yihui Xie (creator of R Markdown) on settings to control how <code>knitr</code> runs code chunks.</li>
 </ul>
 </li>
 <li>
-<a href="https://bookdown.org/yihui/rmarkdown/">“R Markdown: The Definitive Guide”</a>
+<a href="https://bookdown.org/yihui/rmarkdown/" class="external-link">“R Markdown: The Definitive Guide”</a>
 <ul>
 <li>Book from Yihui Xie, J.J. Allaire, and Garrett Grolemund on everything R Markdown.</li>
 </ul>
@@ -201,25 +204,25 @@
 <a href="#formatting-tips" class="anchor"></a>Formatting Tips</h2>
 <ul>
 <li>
-<a href="https://alison.rbind.io/post/2020-05-28-how-i-teach-r-markdown/">“How I Teach R Markdown”</a>
+<a href="https://alison.rbind.io/post/2020-05-28-how-i-teach-r-markdown/" class="external-link">“How I Teach R Markdown”</a>
 <ul>
 <li>Blogpost from Alison Hill on <em>teaching</em> Rmarkdown, that nonetheless contains useful tips.</li>
 </ul>
 </li>
 <li>
-<a href="https://haozhu233.github.io/kableExtra/">“kableExtra”</a>
+<a href="https://haozhu233.github.io/kableExtra/" class="external-link">“kableExtra”</a>
 <ul>
-<li>Website for the <code>kableExtra</code> package from Hao Zhu, which adds advanced formatting options for tables produced by <code><a href="https://rdrr.io/pkg/knitr/man/kable.html">knitr::kable()</a></code>.</li>
+<li>Website for the <code>kableExtra</code> package from Hao Zhu, which adds advanced formatting options for tables produced by <code><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">knitr::kable()</a></code>.</li>
 </ul>
 </li>
 <li>
-<a href="https://cran.r-project.org/web/packages/stargazer/vignettes/stargazer.pdf">“stargazer: beautiful LaTeX, HTML and ASCII tables from R statistical output”</a>
+<a href="https://cran.r-project.org/web/packages/stargazer/vignettes/stargazer.pdf" class="external-link">“stargazer: beautiful LaTeX, HTML and ASCII tables from R statistical output”</a>
 <ul>
 <li>Vignette from Marek Hlavac on the <code>stargazer</code> package, which produces statistical summary tables (as caommonly seen in academic articles).</li>
 </ul>
 </li>
 <li>
-<a href="https://gt.rstudio.com/">“gt”</a>
+<a href="https://gt.rstudio.com/" class="external-link">“gt”</a>
 <ul>
 <li>The <code>gt</code> package for publication-ready tables.</li>
 </ul>
@@ -231,27 +234,27 @@
 <a href="#writing-papers" class="anchor"></a>Writing Papers</h2>
 <ul>
 <li>
-<a href="https://crsh.github.io/papaja_man/">“papaja: Reproducible APA manuscripts with R Markdown”</a>
+<a href="https://crsh.github.io/papaja_man/" class="external-link">“papaja: Reproducible APA manuscripts with R Markdown”</a>
 <ul>
 <li>The <code>papaja</code> package by Frederik Aust &amp; Marius Barth</li>
 </ul>
 </li>
 <li>
-<a href="https://github.com/rstudio/rticles">“rticles: Article Formats for R Markdown”</a>
+<a href="https://github.com/rstudio/rticles" class="external-link">“rticles: Article Formats for R Markdown”</a>
 <ul>
 <li>The <code>rticles</code> package by J. Allaire, Xie, R Foundation, et al., that contains templates for many different journals.</li>
 </ul>
 </li>
 <li>
-<a href="https://github.com/crsh/citr">“RStudio Addin to Insert Markdown Citations”</a>
+<a href="https://github.com/crsh/citr" class="external-link">“RStudio Addin to Insert Markdown Citations”</a>
 <ul>
 <li>The <code>citr</code> package by Frederik Aust</li>
 </ul>
 </li>
 <li>Collections of Citation Style Language (.csl) files:
 <ul>
-<li><a href="https://github.com/citation-style-language/styles" class="uri">https://github.com/citation-style-language/styles</a></li>
-<li><a href="https://www.zotero.org/styles" class="uri">https://www.zotero.org/styles</a></li>
+<li>https://github.com/citation-style-language/styles</li>
+<li>https://www.zotero.org/styles</li>
 </ul>
 </li>
 </ul>
@@ -261,37 +264,37 @@
 <a href="#related-tools" class="anchor"></a>Related Tools</h2>
 <ul>
 <li>
-<a href="https://github.com/ismayc/thesisdown">“thesisdown”</a>
+<a href="https://github.com/ismayc/thesisdown" class="external-link">“thesisdown”</a>
 <ul>
-<li>R package that extends R Markdown for thesis-specific formatting. Also see Kristen Sauby’s <a href="https://github.com/ksauby/thesisdownufl">template</a> for UF theses</li>
+<li>R package that extends R Markdown for thesis-specific formatting. Also see Kristen Sauby’s <a href="https://github.com/ksauby/thesisdownufl" class="external-link">template</a> for UF theses</li>
 </ul>
 </li>
 <li>
-<a href="https://bookdown.org/">“Bookdown”</a>
+<a href="https://bookdown.org/" class="external-link">“Bookdown”</a>
 <ul>
 <li>R package that extends R Markdown for book-length outputs, and better figure/table/reference functionality.</li>
 </ul>
 </li>
 <li>
-<a href="https://pkgdown.r-lib.org/">“pkgdown”</a>
+<a href="https://pkgdown.r-lib.org/" class="external-link">“pkgdown”</a>
 <ul>
 <li>R package that extends R Markdown for generating documentation websites for R packages (and what <em>this</em> website was created in)</li>
 </ul>
 </li>
 <li>
-<a href="https://bookdown.org/yihui/blogdown/">“blogdown”</a>
+<a href="https://bookdown.org/yihui/blogdown/" class="external-link">“blogdown”</a>
 <ul>
 <li>R package that extends R Markdown for generating personal websites (this guide from Yihui Xie, Amber Thomas, and Alison Presmanes Hill is my recommendation for where to start)</li>
 </ul>
 </li>
 <li>
-<a href="https://rstudio.github.io/distill/">“Distill for R Markdown”</a>
+<a href="https://rstudio.github.io/distill/" class="external-link">“Distill for R Markdown”</a>
 <ul>
 <li>R package for publishing scientific and technical writing to the web (without additional software dependencies), from RStudio folks.</li>
 </ul>
 </li>
 <li>
-<a href="https://slides.yihui.org/xaringan/#1">“Presentation Ninja with xaringan”</a>
+<a href="https://slides.yihui.org/xaringan/#1" class="external-link">“Presentation Ninja with xaringan”</a>
 <ul>
 <li>Slides from Yihui Xie on the <code>xaringan</code> package, for slides rendered using <code>remark.js</code>.</li>
 </ul>
@@ -314,11 +317,11 @@
 
       <footer>
       <div class="copyright">
-  <p>Developed by Hao Ye.</p>
+  <p><p>Developed by Hao Ye.</p></p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.9000.</p>
+  <p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 1.6.1.9001.</p></p>
 </div>
 
       </footer>
@@ -326,6 +329,8 @@
 
   
 
+
+  
 
   </body>
 </html>
