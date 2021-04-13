@@ -1,13 +1,13 @@
 Package: RMDintro
 Title: An Introduction to Writing Reproducible Manuscripts Using RMarkdown
-Version: 1.0.1
+Version: 1.1.0
 Authors@R: 
     person(given = "Hao",
            family = "Ye",
            role = c("aut", "cre"),
            email = "haoye@ufl.edu",
            comment = c(ORCID = "0000-0002-8630-1458"))
-Description: What the package does (one paragraph).
+Description: RMarkdown is a versatile document format that can combine text, R code, figures, and tables together in a single document, and create formatted output as PDFs, MS Word files, slides, websites, and more. This workshop will provide a basic introduction to using RMarkdown, how to insert code, tables, figures, and format references, and an overview of the possible output formats.
 License: CC BY 4.0
 Encoding: UTF-8
 LazyData: true
@@ -19,3 +19,9 @@ Imports:
     xaringan (>= 0.18),
     xaringanthemer
 URL: https://github.com/uf-repro/rmarkdown-intro
+learningOutcomes: * describe the principles of reproducible documents
+ * apply markdown syntax to format text
+ * run code chunks in R Markdown
+ * format tables in R Markdown
+ * generate figures in R Markdown
+ * format references in R Markdown

@@ -1,0 +1,64 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+```{r, include = FALSE}
+
+lesson_title <- "An Introduction to Writing Reproducible Manuscripts Using RMarkdown"
+lesson_description <- "RMarkdown is a versatile document format that can combine text, R code, figures, and tables together in a single document, and create formatted output as PDFs, MS Word files, slides, websites, and more. This workshop will provide a basic introduction to using RMarkdown, how to insert code, tables, figures, and format references, and an overview of the possible output formats."
+lesson_keywords <- c("Open Educational Resources",
+                     "Research Support Skills",
+                     "Reproducible Report",
+                     "Literate Programming",
+                     "R Markdown", 
+                     "Workshop")
+
+desc::desc_set(Title = lesson_title,
+               Description = lesson_description)
+
+zenodo_json <- jsonlite::read_json(".zenodo.json")
+zenodo_json$title <- lesson_title
+zenodo_json$description <- lesson_description
+zenodo_json$keywords <- as.list(lesson_keywords)
+jsonlite::write_json(zenodo_json, ".zenodo.json",
+                     auto_unbox = TRUE, pretty = TRUE)
+```
+
+# `r lesson_title`
+
+<!-- badges: start -->
+[![GitHub Actions pkgdown workflow](https://github.com/uf-repro/rmarkdown-intro/workflows/pkgdown/badge.svg)](https://github.com/uf-repro/rmarkdown-intro/actions?query=workflow%3Apkgdown)
+[![DOI](https://zenodo.org/badge/277827412.svg)](https://zenodo.org/badge/latestdoi/277827412)
+<!-- badges: end -->
+
+## Description
+
+`r lesson_description`
+
+## Learning Outcomes
+
+```{r, include = FALSE}
+learning_outcomes <- c("describe the principles of reproducible documents",
+                       "apply markdown syntax to format text", 
+                       "run code chunks in R Markdown", 
+                       "format tables in R Markdown", 
+                       "generate figures in R Markdown", 
+                       "format references in R Markdown")
+outcomes_text <- paste0("* ", learning_outcomes, collapse = "\n")
+desc::desc_set("learningOutcomes", outcomes_text)
+```
+
+By the end of the workshop, participants will be able to:
+
+`r outcomes_text`

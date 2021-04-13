@@ -1,21 +1,22 @@
 {
-"title": "An Introduction to Writing Reproducible Manuscripts Using RMarkdown",
-"creators": [
+  "title": "An Introduction to Writing Reproducible Manuscripts Using RMarkdown",
+  "creators": [
     {
       "affiliation": "University of Florida",
       "name": "Hao Ye",
       "orcid": "0000-0002-8630-1458"
     }
-],
-    "description": "RMarkdown is a versatile document format that can combine text, R code, figures, and tables together in a single document, and create formatted output as PDFs, MS Word files, slides, websites, and more. This workshop will provide a basic introduction to using RMarkdown, how to insert code, tables, figures, and format references, and an overview of the possible output formats.",
-    "keywords": [
+  ],
+  "description": "RMarkdown is a versatile document format that can combine text, R code, figures, and tables together in a single document, and create formatted output as PDFs, MS Word files, slides, websites, and more. This workshop will provide a basic introduction to using RMarkdown, how to insert code, tables, figures, and format references, and an overview of the possible output formats.",
+  "keywords": [
     "Open Educational Resources",
     "Research Support Skills",
     "Reproducible Report",
     "Literate Programming",
-    "R Markdown"
+    "R Markdown",
+    "Workshop"
   ],
-    "access_right": "open",
-    "license": "CC-BY-4.0",
-    "upload_type": "lesson"
+  "access_right": "open",
+  "license": "CC-BY-4.0",
+  "upload_type": "lesson"
 }

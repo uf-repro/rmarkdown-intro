@@ -1,6 +1,6 @@
 # Additional Resources / Readings
 
-## Examples
+## Example Research Papers
 
 * ["Unequal Representation and Gender Stereotypes in Image Search Results for Occupations"](https://github.com/mjskay/gender-in-image-search)
   - example paper (`README.Rmd`) by Kay, Matthew, Matuszek, Cynthia, and Munson, Sean.
@@ -19,7 +19,7 @@
 ## Tutorials
 
 * ["R Markdown for Scientists"](https://rmd4sci.njtierney.com/)
-  - A guide from Nick Tierney on the essentials of using R Markdown for scientists
+  - A self-guided tutorial on the essentials of R Markdown reports from Nick Tierney
   
 * [R Markdown](https://rmarkdown.rstudio.com/lesson-1.html)
   - Multi-part introduction to R Markdown and output formats from R Studio.
