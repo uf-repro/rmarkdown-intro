@@ -15,7 +15,7 @@ navbar:
       - articles
       - references
      right:
-      - syllabus
+      - notes
       - slides
       - resources
       - home
