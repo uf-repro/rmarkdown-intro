@@ -14,10 +14,12 @@ LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 Imports:
-    RefManageR, 
+    knitr (>= 1.31),
+    RefManageR,
     showtext,
     xaringan (>= 0.18),
-    xaringanthemer
+    xaringanthemer,
+    bibtex (>= 0.4.3)
 URL: https://github.com/uf-repro/rmarkdown-intro
 learningOutcomes: * describe the principles of reproducible documents
  * apply markdown syntax to format text
@@ -25,3 +27,5 @@ learningOutcomes: * describe the principles of reproducible documents
  * format tables in R Markdown
  * generate figures in R Markdown
  * format references in R Markdown
+Remotes:  
+    ROpenSci/bibtex
