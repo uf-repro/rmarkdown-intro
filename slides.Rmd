@@ -7,6 +7,7 @@ output:
   xaringan::moon_reader:
     lib_dir: libs
     css: xaringan-themer.css
+    seal: false
     fig_caption: false
     nature:
       highlightStyle: github
