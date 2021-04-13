@@ -1,6 +1,6 @@
 Package: RMDintro
 Title: An Introduction to Writing Reproducible Manuscripts Using RMarkdown
-Version: 1.1.0
+Version: 1.1.1
 Authors@R: 
     person(given = "Hao",
            family = "Ye",
