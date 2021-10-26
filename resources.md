@@ -58,8 +58,8 @@
   - The `citr` package by Frederik Aust
 
 * Collections of Citation Style Language (.csl) files:
-  - https://github.com/citation-style-language/styles
-  - https://www.zotero.org/styles
+  - [https://github.com/citation-style-language/styles](https://github.com/citation-style-language/styles)
+  - [https://www.zotero.org/styles](https://www.zotero.org/styles)
 
 ## Related Tools
 
