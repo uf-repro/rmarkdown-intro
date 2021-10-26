@@ -18,13 +18,14 @@ class: inverse, center, middle
 # An Introduction to Writing Reproducible Manuscripts Using RMarkdown
 ### Hao Ye
 ### Health Science Center Libraries, University of Florida
-### (updated: 2021-04-13)
+### (updated: 2021-10-26)
 
 ---
 # Motivations
 
-Unnecessary pain points when writing a manuscript:
-* syncing changes in results with text (e.g. p-values, number of data points, figures, tables)
+Challenges when writing a paper:
+* syncing results with text  
+  e.g. p-values, number of data points, figures, data tables
 * formatting bibliographies for different journals
 
 ---
@@ -57,16 +58,17 @@ Reproducible Documents:
 
 ---
 
-# Many Platforms Exist:
+# Many Platforms Exist for Reproducible Documents:
 
 * [Manubot](https://github.com/manubot/rootstock)
 * [Stencila](https://stenci.la/)
 * [Jupyter Notebooks](https://jupyter.org/)
+* [Curvenote](https://curvenote.com/)
 
 --
 
 ### This lesson is a basic intro to [R Markdown](https://rmarkdown.rstudio.com/) !
-(many add-ons exist that extend functionality)
+(many add-ons extend functionality)
 
 ---
 class: inverse, center, middle
@@ -75,13 +77,11 @@ class: inverse, center, middle
 
 ---
 
-# R Markdown Tools
+# R Markdown Toolchain
 
 * **`rmarkdown`** is the file-format and main interface with R (`*.Rmd`)
 * **`knitr`** runs code and formats results into markdown
-* `pandoc` converts markdown documents into other formats
-
-&lt;img src="rmarkdownflow.png" title="A diagram from https://rmarkdown.rstudio.com/lesson-2.html, showing the workflow for R Markdown, where an Rmd file is transformed by `knitr` into a markdown file, and then by `pandoc` into multiple output files." alt="A diagram from https://rmarkdown.rstudio.com/lesson-2.html, showing the workflow for R Markdown, where an Rmd file is transformed by `knitr` into a markdown file, and then by `pandoc` into multiple output files."  /&gt;
+* **`pandoc`** converts markdown documents into other formats
 
 ---
 
@@ -118,9 +118,10 @@ rmarkdown::render({document.Rmd})
 ---
 # What happens during knitting?
 
-For a given `document.Rmd`
-1. **`knitr`** runs the code chunks and merges the output back into a markdown file: `document.md`
+1. **`knitr`** runs the code chunks and merges the output back into a markdown file.
 2. `pandoc` converts the markdown into the final output format(s).
+
+&lt;img src="rmarkdownflow.png" title="A diagram from https://rmarkdown.rstudio.com/lesson-2.html, showing the workflow for R Markdown, where an Rmd file is transformed by `knitr` into a markdown file, and then by `pandoc` into multiple output files." alt="A diagram from https://rmarkdown.rstudio.com/lesson-2.html, showing the workflow for R Markdown, where an Rmd file is transformed by `knitr` into a markdown file, and then by `pandoc` into multiple output files."  /&gt;
 
 ---
 class: inverse, center, middle
@@ -140,7 +141,7 @@ output: html_document
 ---
 ```
 
-* this metadata about the document will be incorporated in the final output
+* metadata about the document will be incorporated in the final output
 
 ---
 # A More Complex Header
@@ -161,14 +162,13 @@ output:
 ---
 # Markdown
 
-Other than code chunks, R Markdown documents are written in markdown.
-
---
-
 **Markdown** is a lightweight way to format text:
 * it is written in plaintext (including formatting)
-* formatting is readable in plaintext
-* ideal for version control and documents that don't require extensive typesetting
+* you can use any text editor
+* works well with version control
+* lets you focus on content;  
+  styling can be customized and depends on the output format
+
 
 ---
 
@@ -246,7 +246,8 @@ class: inverse, center, middle
 
 # Code Chunks
 
-Unexecuted code can be marked with triple back-ticks (**not** the same as a single-quote!)
+Unexecuted code can be marked with triple backticks  
+(the backtick is **not** the same as a single-quote!)
 
 ````
 ```
@@ -261,6 +262,7 @@ print("Hello World!")
 ```
 
 ---
+
 # Inserting Code
 
 Including `{r}` will execute the code in R and display the result:
@@ -312,7 +314,7 @@ Today's date is `r Sys.Date()`.
 
 The square root of 10 is 3.1622777.
 
-Today's date is 2021-04-13.
+Today's date is 2021-10-26.
 
 ---
 # Other Coding Languages
@@ -384,11 +386,11 @@ plot(mpg ~ disp, data = mtcars,
 * Get your citations into a `.bib` format. (plain-text bibtex, most reference managers can output a list in this way)
 * Add metadata to the header about the file and the *style* of citations
 * Insert citations using `[@{bibentry}]`, where `{bibentry}` is the unique identifier for the reference in the bibliography.
-  - see also the [`citr` add-in](https://github.com/crsh/citr).
+  - the [`citr` add-in](https://github.com/crsh/citr) also lets you search for the correct `{bibentry}`
 
 ---
 
-# References (`.bib`)
+# Example .bib file
 
 `refs.bib`:
 ```
@@ -404,7 +406,7 @@ plot(mpg ~ disp, data = mtcars,
 
 ---
 
-# References (YAML header)
+# Example YAML header
 
 
 ```yaml
@@ -423,18 +425,13 @@ Find Citation Style Language (CSL) files at
 
 ---
 
-# References (usage)
+# Example citation
 
 ```
 Sometimes whelks eat lobsters [@Barkai_1998].
 ```
 
 .center[*renders into*]
-
-
-```
-## Loading required namespace: bibtex
-```
 
 Sometimes whelks eat lobsters (Barkai and McQuaid, 1988).
 
