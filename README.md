@@ -23,9 +23,9 @@ possible output formats.
 
 By the end of the workshop, participants will be able to:
 
-  - describe the principles of reproducible documents
-  - apply markdown syntax to format text
-  - run code chunks in R Markdown
-  - format tables in R Markdown
-  - generate figures in R Markdown
-  - format references in R Markdown
+-   describe the principles of reproducible documents
+-   apply markdown syntax to format text
+-   run code chunks in R Markdown
+-   format tables in R Markdown
+-   generate figures in R Markdown
+-   format references in R Markdown

@@ -1,6 +1,6 @@
-Package: RMDintro
+Package: rmarkdown.intro
 Title: An Introduction to Writing Reproducible Manuscripts Using RMarkdown
-Version: 1.1.1
+Version: 1.1.2
 Authors@R: 
     person(given = "Hao",
            family = "Ye",
@@ -27,5 +27,6 @@ learningOutcomes: * describe the principles of reproducible documents
  * format tables in R Markdown
  * generate figures in R Markdown
  * format references in R Markdown
-Remotes:  
+Remotes: 
     ROpenSci/bibtex
+X-schema.org-keywords: Open Educational Resources, Research Support Skills, Reproducible Report, Literate Programming, R Markdown, Workshop

@@ -1,0 +1,145 @@
+# -----------------------------------------------------------
+# CITATION file created with {cffr} R package, v0.2.2
+# See also: https://docs.ropensci.org/cffr/
+# -----------------------------------------------------------
+ 
+cff-version: 1.2.0
+message: 'To cite package "rmarkdown.intro" in publications use:'
+type: lesson
+license: CC-BY-4.0
+title: 'rmarkdown.intro: An Introduction to Writing Reproducible Manuscripts Using
+  RMarkdown'
+version: 1.1.2
+abstract: RMarkdown is a versatile document format that can combine text, R code,
+  figures, and tables together in a single document, and create formatted output as
+  PDFs, MS Word files, slides, websites, and more. This workshop will provide a basic
+  introduction to using RMarkdown, how to insert code, tables, figures, and format
+  references, and an overview of the possible output formats.
+authors:
+- family-names: Ye
+  given-names: Hao
+  email: haoye@ufl.edu
+  orcid: https://orcid.org/0000-0002-8630-1458
+preferred-citation:
+  type: manual
+  title: 'rmarkdown.intro: An Introduction to Writing Reproducible Manuscripts Using
+    RMarkdown'
+  authors:
+  - family-names: Ye
+    given-names: Hao
+    email: haoye@ufl.edu
+    orcid: https://orcid.org/0000-0002-8630-1458
+  version: 1.1.2
+  abstract: RMarkdown is a versatile document format that can combine text, R code,
+    figures, and tables together in a single document, and create formatted output
+    as PDFs, MS Word files, slides, websites, and more. This workshop will provide
+    a basic introduction to using RMarkdown, how to insert code, tables, figures,
+    and format references, and an overview of the possible output formats.
+  repository-code: https://github.com/uf-repro/rmarkdown-intro
+  url: https://github.com/uf-repro/rmarkdown-intro
+  contact:
+  - family-names: Ye
+    given-names: Hao
+    email: haoye@ufl.edu
+    orcid: https://orcid.org/0000-0002-8630-1458
+  keywords:
+  - Open Educational Resources
+  - Research Support Skills
+  - Reproducible Report
+  - Literate Programming
+  - R Markdown
+  - Workshop
+  - reproducible-paper
+  - rmarkdown
+  - teaching-materials
+  - workshop
+  license: CC-BY-4.0
+  year: '2022'
+repository-code: https://github.com/uf-repro/rmarkdown-intro
+url: https://github.com/uf-repro/rmarkdown-intro
+contact:
+- family-names: Ye
+  given-names: Hao
+  email: haoye@ufl.edu
+  orcid: https://orcid.org/0000-0002-8630-1458
+keywords:
+- Open Educational Resources
+- Research Support Skills
+- Reproducible Report
+- Literate Programming
+- R Markdown
+- Workshop
+- reproducible-paper
+- rmarkdown
+- teaching-materials
+- workshop
+references:
+- type: software
+  title: knitr
+  abstract: 'knitr: A General-Purpose Package for Dynamic Report Generation in R'
+  notes: Imports
+  authors:
+  - family-names: Xie
+    given-names: Yihui
+    email: xie@yihui.name
+    orcid: https://orcid.org/0000-0003-0645-5666
+  year: '2022'
+  url: https://yihui.org/knitr/
+  version: '>= 1.31'
+- type: software
+  title: RefManageR
+  abstract: 'RefManageR: Straightforward ''BibTeX'' and ''BibLaTeX'' Bibliography
+    Management'
+  notes: Imports
+  authors:
+  - family-names: McLean
+    given-names: Mathew W.
+    email: mathew.w.mclean@gmail.com
+    orcid: https://orcid.org/0000-0002-7891-9645
+  year: '2022'
+  url: https://CRAN.R-project.org/package=RefManageR
+- type: software
+  title: showtext
+  abstract: 'showtext: Using Fonts More Easily in R Graphs'
+  notes: Imports
+  authors:
+  - family-names: Qiu
+    given-names: Yixuan
+  - family-names: details.
+    given-names: authors/contributors of the included software. See file AUTHORS for
+  year: '2022'
+  url: https://CRAN.R-project.org/package=showtext
+- type: software
+  title: xaringan
+  abstract: 'xaringan: Presentation Ninja'
+  notes: Imports
+  authors:
+  - family-names: Xie
+    given-names: Yihui
+    email: xie@yihui.name
+    orcid: https://orcid.org/0000-0003-0645-5666
+  year: '2022'
+  url: https://CRAN.R-project.org/package=xaringan
+  version: '>= 0.18'
+- type: software
+  title: xaringanthemer
+  abstract: 'xaringanthemer: Custom ''xaringan'' CSS Themes'
+  notes: Imports
+  authors:
+  - family-names: Aden-Buie
+    given-names: Garrick
+    email: garrick@adenbuie.com
+    orcid: https://orcid.org/0000-0002-7111-0077
+  year: '2022'
+  url: https://CRAN.R-project.org/package=xaringanthemer
+- type: software
+  title: bibtex
+  abstract: 'bibtex: Bibtex Parser'
+  notes: Imports
+  authors:
+  - family-names: Francois
+    given-names: Romain
+    email: romain@purrple.cat
+    orcid: https://orcid.org/0000-0002-2444-4226
+  year: '2022'
+  version: '>= 0.4.3'
