@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">An Introduction to Writing Reproducible Manuscripts Using RMarkdown</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.1.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.1.2</span>
       </span>
     </div>
 
@@ -58,18 +58,15 @@
       <h1>Syllabus</h1>
     </div>
 
-<div class="section level1">
-
-<p>Hao Ye Health Science Center Libraries, University of Florida (updated: 2021-10-26)</p>
+<div id="syllabus" class="section level1">
+<p>Hao Ye Health Science Center Libraries, University of Florida (updated: 2022-06-07)</p>
 <div class="section level2">
-<h2 id="thanks">Intro<a class="anchor" aria-label="anchor" href="#syllabus"></a></h2>
-<ul><li>Motivations Challenges when writing a paper:
-<ul><li>syncing results with text<br>
+<h2 id="intro">Intro<a class="anchor" aria-label="anchor" href="#intro"></a></h2>
+<ul><li>Motivations Challenges when writing a paper:<ul><li>syncing results with text<br>
 e.g. p-values, number of data points, figures, data tables</li>
 <li>formatting bibliographies for different journals</li>
 </ul></li>
-<li>Learning Objectives
-<ul><li>describe the principles of reproducible documents</li>
+<li>Learning Objectives<ul><li>describe the principles of reproducible documents</li>
 <li>apply markdown syntax to format text</li>
 <li>run code chunks in R Markdown</li>
 <li>format tables in R Markdown</li>
@@ -78,18 +75,13 @@ e.g. p-values, number of data points, figures, data tables</li>
 </ul></li>
 </ul></div>
 <div class="section level2">
-<h2 id="intro">Reproducible Documents<a class="anchor" aria-label="anchor" href="#intro"></a></h2>
-<ul><li>Overview Reproducible Documents:
-<ul><li>a way to write reports that embed text with other outputs:
-<ul><li>code, figures, tables</li>
-</ul></li>
-<li>authors only make changes in <em>one</em> place
-<ul><li>the entire document stays up to date</li>
+<h2 id="reproducible-documents">Reproducible Documents<a class="anchor" aria-label="anchor" href="#reproducible-documents"></a></h2>
+<ul><li>Overview Reproducible Documents:<ul><li>a way to write reports that embed text with other outputs:<ul><li>code, figures, tables</li></ul></li>
+<li>authors only make changes in <em>one</em> place<ul><li>the entire document stays up to date</li>
 <li>(instead of redoing an analysis, and copying images and numbers into a separate file)</li>
 </ul></li>
 </ul></li>
-<li>Many Platforms Exist for Reproducible Documents:
-<ul><li><a href="https://github.com/manubot/rootstock" class="external-link">Manubot</a></li>
+<li>Many Platforms Exist for Reproducible Documents:<ul><li><a href="https://github.com/manubot/rootstock" class="external-link">Manubot</a></li>
 <li><a href="https://stenci.la/" class="external-link">Stencila</a></li>
 <li><a href="https://jupyter.org/" class="external-link">Jupyter Notebooks</a></li>
 <li>
@@ -97,46 +89,36 @@ e.g. p-values, number of data points, figures, data tables</li>
 </ul></li>
 </ul></div>
 <div class="section level2">
-<h2 id="reproducible-documents">How R Markdown Works<a class="anchor" aria-label="anchor" href="#reproducible-documents"></a></h2>
-<ul><li>R Markdown Toolchain
-<ul><li>
+<h2 id="how-r-markdown-works">How R Markdown Works<a class="anchor" aria-label="anchor" href="#how-r-markdown-works"></a></h2>
+<ul><li>R Markdown Toolchain<ul><li>
 <strong><code>rmarkdown</code></strong> is the file-format and main interface with R (<code>*.Rmd</code>)</li>
 <li>
 <strong><code>knitr</code></strong> runs code and formats results into markdown</li>
 <li>
 <strong><code>pandoc</code></strong> converts markdown documents into other formats</li>
 </ul></li>
-<li>Installation
-<ul><li>RStudio comes with <code>pandoc</code>.
-<ul><li>but it can be <a href="https://pandoc.org/installing.html" class="external-link">installed separately</a>, as well.</li>
-</ul></li>
+<li>Installation<ul><li>RStudio comes with <code>pandoc</code>.<ul><li>but it can be <a href="https://pandoc.org/installing.html" class="external-link">installed separately</a>, as well.</li></ul></li>
 <li>The <strong><code>rmarkdown</code></strong> package includes <strong><code>knitr</code></strong> as a dependency. For PDF output, you also need LaTeX. The <a href="https://yihui.org/tinytex/" class="external-link"><strong><code>tinytex</code></strong> package</a> provides a mechanism for a lightweight LaTeX install:</li>
 </ul><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">tinytex</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/tinytex/man/install_tinytex.html" class="external-link">install_tinytex</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 </li>
-<li>Creating Documents
-<ol style="list-style-type: decimal"><li>Create an R Markdown document.</li>
-</ol><ul><li>Use the <code>New R Markdown</code> file option in RStudio, or create a plaintext file.</li>
-</ul><ol start="2" style="list-style-type: decimal"><li>Run the R code</li>
-</ol><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<li>Creating Documents<ol style="list-style-type: decimal"><li>Create an R Markdown document.</li></ol><ul><li>Use the <code>New R Markdown</code> file option in RStudio, or create a plaintext file.</li></ul><ol start="2" style="list-style-type: decimal"><li>Run the R code</li></ol><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">rmarkdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgs.rstudio.com/rmarkdown/reference/render.html" class="external-link">render</a></span><span class="op">(</span><span class="op">{</span><span class="va">document.Rmd</span><span class="op">}</span><span class="op">)</span></code></pre></div>
 <strong>OR</strong> Use the <code>Knit</code> button in RStudio. <img src="knit-button.png" title="A screenshot of the Knit button in RStudio, which appears as an image of a ball of yarn with a needle in it, next to the text 'Knit' and an optional pulldown menu in the form of a down arrow." alt="A screenshot of the Knit button in RStudio, which appears as an image of a ball of yarn with a needle in it, next to the text 'Knit' and an optional pulldown menu in the form of a down arrow."></li>
-<li>What happens during knitting?
-<ol style="list-style-type: decimal"><li>
+<li>What happens during knitting?<ol style="list-style-type: decimal"><li>
 <strong><code>knitr</code></strong> runs the code chunks and merges the output back into a markdown file.</li>
 <li>
 <code>pandoc</code> converts the markdown into the final output format(s). <img src="rmarkdownflow.png" title="A diagram from https://rmarkdown.rstudio.com/lesson-2.html, showing the workflow for R Markdown, where an Rmd file is transformed by `knitr` into a markdown file, and then by `pandoc` into multiple output files." alt="A diagram from https://rmarkdown.rstudio.com/lesson-2.html, showing the workflow for R Markdown, where an Rmd file is transformed by `knitr` into a markdown file, and then by `pandoc` into multiple output files."></li>
 </ol></li>
 </ul></div>
 <div class="section level2">
-<h2 id="how-r-markdown-works">Syntax<a class="anchor" aria-label="anchor" href="#how-r-markdown-works"></a></h2>
+<h2 id="syntax">Syntax<a class="anchor" aria-label="anchor" href="#syntax"></a></h2>
 <ul><li>
 <p>Basic Structure R Markdown files begin with a header:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"An example document"</span></span>
 <span id="cb3-2"><a href="#cb3-2"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">"Hao Ye"</span></span>
 <span id="cb3-3"><a href="#cb3-3"></a><span class="fu">output</span><span class="kw">:</span><span class="at"> html_document</span></span></code></pre></div>
-<ul><li>metadata about the document will be incorporated in the final output</li>
-</ul></li>
+<ul><li>metadata about the document will be incorporated in the final output</li></ul></li>
 <li>
 <p>A More Complex Header</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Chaotic Dynamics"</span></span>
@@ -166,10 +148,7 @@ styling can be customized and depends on the output format</li>
 1. numbered list
 1. numbered list</code></pre>
 <p><em>renders into</em></p>
-<ul><li>bullet list
-<ul><li>sub-item</li>
-</ul></li>
-</ul><ol style="list-style-type: decimal"><li>numbered list</li>
+<ul><li>bullet list<ul><li>sub-item</li></ul></li></ul><ol style="list-style-type: decimal"><li>numbered list</li>
 <li>numbered list</li>
 </ol></li>
 <li>
@@ -189,7 +168,7 @@ Formatted links:
 </li>
 </ul></div>
 <div class="section level2">
-<h2 id="syntax">Code Chunks<a class="anchor" aria-label="anchor" href="#syntax"></a></h2>
+<h2 id="code-chunks">Code Chunks<a class="anchor" aria-label="anchor" href="#code-chunks"></a></h2>
 <ul><li>
 <p>Code Chunks Unexecuted code can be marked with triple backticks<br>
 (the backtick is <strong>not</strong> the same as a single-quote!)</p>
@@ -197,7 +176,7 @@ Formatted links:
 print("Hello World!")
 ```</code></pre>
 <p><em>renders into</em></p>
-<pre><code>print("Hello World!")</code></pre>
+<pre><code><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="st">"Hello World!"</span><span class="op">)</span></code></pre>
 </li>
 <li>
 <p>Inserting Code Including <code>{r}</code> will execute the code in R and display the result:</p>
@@ -207,7 +186,7 @@ print("Hello World!")
 <p><em>renders into</em></p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fl">1</span> <span class="op">+</span> <span class="fl">1</span></code></pre></div>
-<pre><code>## [1] 2</code></pre>
+<pre><code><span class="co">## [1] 2</span></code></pre>
 </li>
 <li>
 <p>Code Chunk Options The evaluation of code chunks can be controlled through options, e.g.:</p>
@@ -223,7 +202,7 @@ print("Hello World!")
 <p>Inline code Code expressions can be embedded inline with text, too.</p>
 <pre><code>The square root of 10 is `r sqrt(10)`.
 Today's date is `r Sys.Date()`.</code></pre>
-<p><em>renders into</em> The square root of 10 is 3.1622777. Today’s date is 2021-10-26.</p>
+<p><em>renders into</em> The square root of 10 is 3.1622777. Today’s date is 2022-06-07.</p>
 </li>
 <li><p>Other Coding Languages <strong><code>knitr</code></strong> supports other programming languages. See <a href="https://bookdown.org/yihui/rmarkdown/language-engines.html" class="external-link">Section 2.7</a> of the R Markdown book for details.</p></li>
 <li>
@@ -261,10 +240,8 @@ knitr::kable(mtcars[1:4,1:3],
 <p>References</p>
 <ul><li>Get your citations into a <code>.bib</code> format. (plain-text bibtex, most reference managers can output a list in this way)</li>
 <li>Add metadata to the header about the file and the <em>style</em> of citations</li>
-<li>Insert citations using <code>[@{bibentry}]</code>, where <code>{bibentry}</code> is the unique identifier for the reference in the bibliography.
-<ul><li>the <a href="https://github.com/crsh/citr" class="external-link"><code>citr</code> add-in</a> also lets you search for the correct <code>{bibentry}</code>
-</li>
-</ul></li>
+<li>Insert citations using <code>[@{bibentry}]</code>, where <code>{bibentry}</code> is the unique identifier for the reference in the bibliography.<ul><li>the <a href="https://github.com/crsh/citr" class="external-link"><code>citr</code> add-in</a> also lets you search for the correct <code>{bibentry}</code>
+</li></ul></li>
 </ul></li>
 <li>
 <p>Example .bib file <code>refs.bib</code>:</p>
@@ -292,13 +269,11 @@ knitr::kable(mtcars[1:4,1:3],
 <p>Example citation</p>
 <pre><code>Sometimes whelks eat lobsters [@Barkai_1998].</code></pre>
 <p><em>renders into</em> Sometimes whelks eat lobsters (Barkai and McQuaid, 1988). ### References</p>
-<ol style="list-style-type: decimal"><li>Barkai, A. and C. McQuaid (1988). “Predator-prey role reversal in a marine benthic ecosystem”. In: <em>Science</em> 242.4875, pp. 62-64.</li>
-</ol></li>
+<ol style="list-style-type: decimal"><li>Barkai, A. and C. McQuaid (1988). “Predator-prey role reversal in a marine benthic ecosystem”. In: <em>Science</em> 242.4875, pp. 62-64.</li></ol></li>
 </ul></div>
 <div class="section level2">
-<h2 id="code-chunks">Extensions<a class="anchor" aria-label="anchor" href="#code-chunks"></a></h2>
-<ul><li>Basic Output Formats
-<ul><li>
+<h2 id="extensions">Extensions<a class="anchor" aria-label="anchor" href="#extensions"></a></h2>
+<ul><li>Basic Output Formats<ul><li>
 <code>html_document</code> - a single HTML file</li>
 <li>
 <code>pdf_document</code> - a single PDF file (requires a LaTeX installation, see the <a href="https://yihui.org/tinytex/" class="external-link"><strong><code>tinytex</code></strong> package</a>)</li>
@@ -307,8 +282,7 @@ knitr::kable(mtcars[1:4,1:3],
 <li>
 <code>github_document</code> - markdown for rendering in GitHub</li>
 </ul></li>
-<li>Other Formats MANY packages build on R Markdown to do more complex things:
-<ul><li>
+<li>Other Formats MANY packages build on R Markdown to do more complex things:<ul><li>
 <a href="https://github.com/ismayc/thesisdown" class="external-link">thesisdown</a> has thesis templates</li>
 <li>
 <a href="https://bookdown.org/yihui/blogdown/" class="external-link">blogdown</a> for websites</li>
@@ -318,12 +292,10 @@ knitr::kable(mtcars[1:4,1:3],
 </ul></li>
 </ul></div>
 <div class="section level2">
-<h2 id="extensions">Thanks<a class="anchor" aria-label="anchor" href="#extensions"></a></h2>
+<h2 id="thanks">Thanks<a class="anchor" aria-label="anchor" href="#thanks"></a></h2>
 <ul><li>Let me know what content you’d like to see</li>
 <li>Contact me for additional questions or consultation requests!</li>
-<li>Check back in on the libguide for more modules and contact info:
-<ul><li><a href="https://guides.uflib.ufl.edu/reproducibility" class="external-link uri">https://guides.uflib.ufl.edu/reproducibility</a></li>
-</ul></li>
+<li>Check back in on the libguide for more modules and contact info:<ul><li><a href="https://guides.uflib.ufl.edu/reproducibility" class="external-link uri">https://guides.uflib.ufl.edu/reproducibility</a></li></ul></li>
 </ul></div>
 </div>
 
@@ -342,7 +314,7 @@ knitr::kable(mtcars[1:4,1:3],
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 1.9000.9000.9000.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.9000.</p>
 </div>
 
       </footer></div>
