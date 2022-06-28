@@ -154,47 +154,28 @@ knitr::include_graphics("rmarkdownflow.png")
 ---
 class: inverse, center, middle
 
-# Syntax
-
----
-# Basic Structure
-
-R Markdown files begin with a header:
-```{yaml}
----
-title: "An example document"
-author: "Hao Ye"
-output: html_document
----
-```
-
-* metadata about the document will be incorporated in the final output
-
----
-# A More Complex Header
-```{yaml}
----
-title: "Chaotic Dynamics"
-author:
-- "Hao Ye"
-- "Gritty"
-output:
-  html_document:
-    toc: true
-    toc_depth: 2
----
-```
-
----
 # Markdown
 
-**Markdown** is a lightweight way to format text:
-* it is written in plaintext (including formatting)
+---
+# About Markdown
+
+Markdown is a **markup** language.
+
+* Unlike MS Word or Google Docs, where you apply formatting to the text directly;
+
+* In **markdown**, you write out the formatting in the text.  
+  The text file is then processed to produce a formatted document.
+
+---
+
+# Markdown Formatting
+
+Markdown has an intentionally limited set of formatting commands:
+* formatting is easy to read in plaintext
 * you can use any text editor
 * works well with version control
 * lets you focus on content;  
-  styling can be customized and depends on the output format
-
+  styling can be customized for the output format
 
 ---
 
@@ -266,7 +247,44 @@ Formatted links:
 ---
 class: inverse, center, middle
 
-# Code Chunks
+# R Markdown
+
+---
+# What does R Markdown add?
+
+**R Markdown** adds additional syntax for authoring code-based reports.
+* document metadata
+* code chunks
+* references
+
+---
+# Header Information
+
+R Markdown files begin with a header:
+```{yaml}
+---
+title: "An example document"
+author: "Hao Ye"
+output: html_document
+---
+```
+
+* metadata about the document will be incorporated in the final output
+
+---
+# A More Complex Header
+```{yaml}
+---
+title: "Chaotic Dynamics"
+author:
+- "Hao Ye"
+- "Gritty"
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
+---
+```
 
 ---
 
