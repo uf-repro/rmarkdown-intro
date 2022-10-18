@@ -59,7 +59,7 @@
     </div>
 
 <div id="syllabus" class="section level1">
-<p>Hao Ye Health Science Center Libraries, University of Florida (updated: 2022-07-19)</p>
+<p>Hao Ye Health Science Center Libraries, University of Florida (updated: 2022-10-18)</p>
 <div class="section level2">
 <h2 id="intro">Intro<a class="anchor" aria-label="anchor" href="#intro"></a></h2>
 <ul><li>Motivations Challenges when writing a paper:<ul><li>syncing results with text<br>
@@ -104,11 +104,11 @@ e.g. p-values, number of data points, figures, data tables</li>
 </li>
 <li>Creating Documents<ol style="list-style-type: decimal"><li>Create an R Markdown document.</li></ol><ul><li>Use the <code>New R Markdown</code> file option in RStudio, or create a plaintext file.</li></ul><ol start="2" style="list-style-type: decimal"><li>Run the R code</li></ol><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">rmarkdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgs.rstudio.com/rmarkdown/reference/render.html" class="external-link">render</a></span><span class="op">(</span><span class="op">{</span><span class="va">document.Rmd</span><span class="op">}</span><span class="op">)</span></span></code></pre></div>
-<strong>OR</strong> Use the <code>Knit</code> button in RStudio. <img src="knit-button.png" title="A screenshot of the Knit button in RStudio, which appears as an image of a ball of yarn with a needle in it, next to the text 'Knit' and an optional pulldown menu in the form of a down arrow." alt="A screenshot of the Knit button in RStudio, which appears as an image of a ball of yarn with a needle in it, next to the text 'Knit' and an optional pulldown menu in the form of a down arrow."></li>
+<strong>OR</strong> Use the <code>Knit</code> button in RStudio. <img src="knit-button.png" alt="A screenshot of the Knit button in RStudio, which appears as an image of a ball of yarn with a needle in it, next to the text 'Knit' and an optional pulldown menu in the form of a down arrow."></li>
 <li>What happens during knitting?<ol style="list-style-type: decimal"><li>
 <strong><code>knitr</code></strong> runs the code chunks and merges the output back into a markdown file.</li>
 <li>
-<code>pandoc</code> converts the markdown into the final output format(s). <img src="rmarkdownflow.png" title="A diagram from https://rmarkdown.rstudio.com/lesson-2.html, showing the workflow for R Markdown, where an Rmd file is transformed by `knitr` into a markdown file, and then by `pandoc` into multiple output files." alt="A diagram from https://rmarkdown.rstudio.com/lesson-2.html, showing the workflow for R Markdown, where an Rmd file is transformed by `knitr` into a markdown file, and then by `pandoc` into multiple output files."></li>
+<code>pandoc</code> converts the markdown into the final output format(s). <img src="rmarkdownflow.png" alt="A diagram from https://rmarkdown.rstudio.com/lesson-2.html, showing the workflow for R Markdown, where an Rmd file is transformed by `knitr` into a markdown file, and then by `pandoc` into multiple output files."></li>
 </ol></li>
 </ul></div>
 <div class="section level2">
@@ -214,7 +214,7 @@ print("Hello World!")
 <p>Inline code Code expressions can be embedded inline with text, too.</p>
 <pre><code>The square root of 10 is `r sqrt(10)`.
 Today's date is `r Sys.Date()`.</code></pre>
-<p><em>renders into</em> The square root of 10 is 3.1622777. Today’s date is 2022-07-19.</p>
+<p><em>renders into</em> The square root of 10 is 3.1622777. Today’s date is 2022-10-18.</p>
 </li>
 <li><p>Other Coding Languages <strong><code>knitr</code></strong> supports other programming languages. See <a href="https://bookdown.org/yihui/rmarkdown/language-engines.html" class="external-link">Section 2.7</a> of the R Markdown book for details.</p></li>
 <li>
@@ -236,9 +236,9 @@ knitr::kable(mtcars[1:4,1:3],
 </li>
 <li>
 <p>Figures (images)</p>
-<pre><code>![Nyan Cat: animated gif of a grey cat with a pop-tart body flying through space and leaving a rainbow trail behind](https://s3-us-west-2.amazonaws.com/webcitation/7eb1102857c5c8b4fcccb53cd2e84520496841f0)</code></pre>
+<pre><code>![Nyan Cat: animation of a grey cat with a pop-tart body flying through space and leaving a rainbow trail](https://s3-us-west-2.amazonaws.com/webcitation/7eb1102857c5c8b4fcccb53cd2e84520496841f0)</code></pre>
 <div class="figure">
-<img src="https://s3-us-west-2.amazonaws.com/webcitation/7eb1102857c5c8b4fcccb53cd2e84520496841f0" alt=""><p class="caption">Nyan Cat: animated gif of a grey cat with a pop-tart body flying through space and leaving a rainbow trail behind</p>
+<img src="https://s3-us-west-2.amazonaws.com/webcitation/7eb1102857c5c8b4fcccb53cd2e84520496841f0" alt=""><p class="caption">Nyan Cat: animation of a grey cat with a pop-tart body flying through space and leaving a rainbow trail</p>
 </div>
 </li>
 <li>
@@ -246,7 +246,7 @@ knitr::kable(mtcars[1:4,1:3],
 <div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">mpg</span> <span class="op">~</span> <span class="va">disp</span>, data <span class="op">=</span> <span class="va">mtcars</span>, </span>
 <span>     cex <span class="op">=</span> <span class="fl">2</span>, cex.lab <span class="op">=</span> <span class="fl">2</span>, cex.axis <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code></pre></div>
-<p><img src="/Users/runner/work/rmarkdown-intro/rmarkdown-intro/slides_temp_files/figure-html/unnamed-chunk-10-1.png" title="A scatterplot of mileage (mpg) vs. engine displacement (disp) from the mtcars dataset. There is a general inverse relationship (curvilinear, with a hint of being concave-up) with higher displacement corresponding to lower mileage. Displacement on the x-axis ranges from 71.1 to 472 (cubic centimeters?) and mileage on the y-axis ranges from 10.4 to 33.9 (miles per gallon)." alt="A scatterplot of mileage (mpg) vs. engine displacement (disp) from the mtcars dataset. There is a general inverse relationship (curvilinear, with a hint of being concave-up) with higher displacement corresponding to lower mileage. Displacement on the x-axis ranges from 71.1 to 472 (cubic centimeters?) and mileage on the y-axis ranges from 10.4 to 33.9 (miles per gallon)." width="400" height="400"></p>
+<p><img src="/Users/runner/work/rmarkdown-intro/rmarkdown-intro/slides_temp_files/figure-html/unnamed-chunk-10-1.png" alt="A scatterplot of mileage (mpg) vs. engine displacement (disp) from the mtcars dataset. There is a general inverse relationship (curvilinear, with a hint of being concave-up) with higher displacement corresponding to lower mileage. Displacement on the x-axis ranges from 71.1 to 472 (cubic centimeters?) and mileage on the y-axis ranges from 10.4 to 33.9 (miles per gallon)." width="400" height="400"></p>
 </li>
 <li>
 <p>References</p>
@@ -256,7 +256,7 @@ knitr::kable(mtcars[1:4,1:3],
 </li></ul></li>
 </ul></li>
 <li>
-<p>Example .bib file <code>refs.bib</code>:</p>
+<p>Example .bib file contents of <code>refs.bib</code> file:</p>
 <pre><code>@article{Barkai_1988,
   Author = {Amos Barkai and Christopher McQuaid},
   Journal = {Science},

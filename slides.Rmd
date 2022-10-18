@@ -396,10 +396,10 @@ knitr::kable(mtcars[1:4,1:3], format = "markdown")
 # Figures (images)
 
 ```
-![Nyan Cat: animated gif of a grey cat with a pop-tart body flying through space and leaving a rainbow trail behind](https://s3-us-west-2.amazonaws.com/webcitation/7eb1102857c5c8b4fcccb53cd2e84520496841f0)
+![Nyan Cat: animation of a grey cat with a pop-tart body flying through space and leaving a rainbow trail](https://s3-us-west-2.amazonaws.com/webcitation/7eb1102857c5c8b4fcccb53cd2e84520496841f0)
 ```
 
-![Nyan Cat: animated gif of a grey cat with a pop-tart body flying through space and leaving a rainbow trail behind](https://s3-us-west-2.amazonaws.com/webcitation/7eb1102857c5c8b4fcccb53cd2e84520496841f0)
+![Nyan Cat: animation of a grey cat with a pop-tart body flying through space and leaving a rainbow trail](https://s3-us-west-2.amazonaws.com/webcitation/7eb1102857c5c8b4fcccb53cd2e84520496841f0)
 
 ---
 
@@ -423,7 +423,7 @@ plot(mpg ~ disp, data = mtcars,
 
 # Example .bib file
 
-`refs.bib`:
+contents of `refs.bib` file:
 ```
 @article{Barkai_1988,
 	Author = {Amos Barkai and Christopher McQuaid},
