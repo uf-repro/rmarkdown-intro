@@ -46,6 +46,10 @@
 * ["gt"](https://gt.rstudio.com/)
   - The `gt` package for publication-ready tables.
 
+* ["flextable"](https://davidgohel.github.io/flextable/)
+  - The `flextable` package for styling tables. Note that `flextable` includes support for MS Word and PDF outputs, whereas `gt` currently supports HTML, LaTeX, and RTF output.
+
+
 ## Writing Papers
 
 * ["papaja: Reproducible APA manuscripts with R Markdown"](https://crsh.github.io/papaja_man/)
