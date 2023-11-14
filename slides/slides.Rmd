@@ -1,7 +1,7 @@
 ---
 title: "`r desc::desc_get('Title', '..')`"
-author: "Hao Ye"
-institute: "Health Science Center Libraries, University of Florida"
+author: "Natya Hans"
+institute: "Academic Research Consulting and Services, University of Florida"
 date: "(updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
@@ -265,7 +265,7 @@ R Markdown files begin with a header:
 ```{yaml}
 ---
 title: "An example document"
-author: "Hao Ye"
+author: "Natya Hans"
 output: html_document
 ---
 ```
@@ -278,7 +278,7 @@ output: html_document
 ---
 title: "Chaotic Dynamics"
 author:
-- "Hao Ye"
+- "Natya Hans"
 - "Gritty"
 output:
   html_document:
@@ -443,7 +443,7 @@ contents of `refs.bib` file:
 ```{yaml}
 ---
 title: "An example document"
-author: "Hao Ye"
+author: "Natya Hans"
 output: html_document
 bibliography: refs.bib
 csl: methods-in-ecology-and-evolution.csl
