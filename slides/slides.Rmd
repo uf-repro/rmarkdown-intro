@@ -92,9 +92,10 @@ Reproducible Documents:
 * [Curvenote](https://curvenote.com/)
 * [Overleaf](https://www.overleaf.com/edu/ufl)
 
+
 --
 
-### This lesson is a basic intro to [R Markdown](https://rmarkdown.rstudio.com/) !
+### Please not that this lesson is a basic intro to [R Markdown](https://rmarkdown.rstudio.com/) !
 (many add-ons extend functionality)
 
 ---
@@ -201,14 +202,14 @@ Markdown has an intentionally limited set of formatting commands:
 - bullet list
   * sub-item
 1. numbered list
-1. numbered list
+2. numbered list
 ```
 .center[*renders into*]
 
 - bullet list
   + sub-item
 1. numbered list
-1. numbered list
+2. numbered list
 ---
 
 # Syntax: text
